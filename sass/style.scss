@@ -1,0 +1,28 @@
+@media screen and (max-width: 380px) {
+ 
+    body {
+        width: 100%;
+        font-family: roboto,sans-serif;
+    }
+ .logo img{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+img {
+	width: 80%;
+	padding: 5%;
+     font-family: shrikhand;
+}
+.localisation {
+	background-color: grey;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+ .localisation i{
+    padding: 10px;
+}
+}
+}
