@@ -140,8 +140,26 @@ border-radius: 15px 15px 15px 15px;
 footer {
 	background-color: black;
 	color: white;
-	text-decoration: none;
+	list-style:  none;
 }
 	
-
+footer ul{
+	
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		font-family: roboto;
+		font-size: 1.5rem;
+	
 }
+.titre-resto {
+	color: black;
+	font-family: roboto;
+	font-size: 1.3rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: auto;
+}
+}
+
