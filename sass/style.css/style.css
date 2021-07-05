@@ -12,13 +12,14 @@ margin-right: 3%;
 }
 /*PARTIE logo oh my food*/
 .logo img{
-width: 80%;
+width: 63%;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 font-family: shrikhand;
 padding: 5%;
+margin-left: 20px;
 }
 
 
@@ -84,7 +85,7 @@ margin-left: 11%;
 }
 .chiffre {
 	display: flex;
-	border-radius: 100%;
+	border-radius: 100px;
 	background-color: #9356DC;
 	padding: 5px;
 	margin: 10px;
@@ -94,54 +95,113 @@ margin-left: 11%;
 	font-size: 0.9rem;
 	height: 19px;
 }
-.emoticone {
+.fonction-emoticone {
 	position: absolute;
 	left: 18%;
 	color: grey;
 }
-.emoticone :active,:hover {
-color: #9356DC;
-}
-/*partie carte image resto*/
 
+
+/*partie carte image resto*/
 .restaurant {
-	background-color: #F2F2F2;
+	background-color: #f6f6f6;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-bottom: 20px;
+    padding-left: 8px;
+    padding-right: 8PX;
 }
+
+
 .restoArticle {
-text-decoration: none;
 color: black;
 margin-bottom: 8px;
 border-radius: 15px;
-background-color: white;
 display: flex;
 flex-direction: column;
-box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+margin-bottom: 30px;
 cursor: pointer;
 
 }
-
-.restoArticle img{
-border-radius: 15px 15px 15px 15px;
-    object-fit: cover;
-    height: 250px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
-    box-sizing: border-box;
-    border: 3px solid #fff;
-    width: 97%;
-   
+.restoLiens {
+	text-decoration: none;
+	display: block;
+	position: relative;
 }
+.restoArticle img {
+
+		border-radius: 15px 15px 0px 0px;
+		object-fit: cover;
+		border: 0px solid transparent;
+		width: 95%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		box-shadow: none;
+}
+
+.articleimg {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+.badge {
+	background-color: #99e2d0;
+	color: green;
+	position: absolute;
+	top: 16px;
+	right: 21px;
+	height: 8%;
+	width: 23%;
+	display: flex;
+	align-items: center;
+	font-size: 1.1rem;
+}
+.titre-resto {
+	color: black;
+	font-family: roboto;
+	font-size: 1.3rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	background-color: white;
+    width: 93%;
+	border-radius: 0 0 15px 15px;
+	padding-left: 3%;
+	margin-left: 2%;
+	padding-bottom: 12px;
+	}
+
+.resto-coeur {
+	position: absolute;
+	bottom: 39px;
+	right: 16px;
+	width: 33px;
+	height: 29PX;
+	font-size: 2rem;
+}
+
+/*PARTIE FOOTER*/
 .logofooter{
 	font-style: italic;
 	font-family:Shrikhand ;
 	font-size: 1.5rem;
 	color: white;
-	background-color: rgba(0,0,0,0.3);
+	
 }
 footer {
-	background-color: black;
-	color: white;
-	list-style:  none;
+	background-color: #000000bf;
+    color: white;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
+
 	
 footer ul{
 	
@@ -152,14 +212,19 @@ footer ul{
 		font-size: 1.5rem;
 	
 }
-.titre-resto {
-	color: black;
-	font-family: roboto;
-	font-size: 1.3rem;
+.logofoterEmoticone {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	margin-right: 16px;
+}
+.logofooterText {
+	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
-	height: auto;
+}
+.Contact {
+	text-decoration: none;
+	color: white;
 }
 }
 
