@@ -226,5 +226,49 @@ footer ul{
 	text-decoration: none;
 	color: white;
 }
+
+/*PARTIE MAQUETTE DES MENU */
+.menunav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.menunav img {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 63%;
+	flex-wrap: wrap;
+}
+.retourMenu {
+	position: absolute;
+	left: 10px;
+	font-size: 1.5rem;
+	color: black;
+	top: 1rem;
+}
+.menunav-image img{
+		width: 365px;
+		height: 100%;
+		margin-top: 10px;
+		object-fit: cover;
+		margin-left: -9px;
+	}
+	.menunav_titre {
+		font-family: shrikhand;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	
+	}
+	.titre-coeur {
+		font-size: 1.5rem;
+	}
 }
 
