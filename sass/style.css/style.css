@@ -258,7 +258,7 @@ footer ul{
 		margin-top: 10px;
 		object-fit: cover;
 		margin-left: -9px;
-	}
+}
 	.menunav_titre {
 		font-family: shrikhand;
 		display: flex;
@@ -266,9 +266,74 @@ footer ul{
 		justify-content: space-around;
 		align-items: center;
 	
-	}
+}
 	.titre-coeur {
 		font-size: 1.5rem;
-	}
 }
+.corps {
+	background-color: #f6f6f6;
+	margin-left: -9px;
+	border-radius: 40PX 40px 0px 0px;
+	position: relative;
+	margin-top: -44px;
+}
+	.titre-menu {
+	border-bottom: 3px solid #99e2d0;
+	width: 46px;
+}
+
+
+.entree1 {
+	display: flex;
+	flex-direction: column;
+	border-radius: 25PX 25PX 18px 18px;
+	background-color: white;
+	margin-bottom: 10px;
+	padding: 7px;
+	flex-wrap: wrap;
+	width: 90%;
+	justify-content: flex-start;
+	align-items: flex-start;
+	
+}
+.menu-entree,.menu_plats,.menu-desserts {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 5px;
+}
+.description {
+	margin-top: -10px;
+	padding: 0px;
+}
+.plat {
+	margin-top: 4px;
+}
+.menu-prix {
+	position: absolute;
+	right: 28px;
+	margin-top: 32px;
+	font-weight: 700;
+}
+.commande {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(#FF79DA,#BE56DB);
+	border-radius: 30px;
+	width: 40%;
+	cursor: pointer;
+	height: 64px;
+	color: white;   
+    font-size: 1rem;
+    margin-left: 111px;
+}
+.button-commande {
+	display: flex;
+	margin-top: 10px;
+	padding-bottom: 20px;
+}
+	}
+
+
 
