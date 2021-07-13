@@ -1,0 +1,800 @@
+@media screen and (max-width: 420px) {
+  html, body {
+    margin: 0%;
+    font-family: roboto,sans-serif;
+  }
+  /*PARTIE logo oh my food*/
+  .header-logo img {
+    width: 63%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 5%;
+    margin-left: 20px;
+  }
+  /*PARTIE LOCALISATION IMPUT*/
+  .header-localisation {
+    background-color: #DBD9D9;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 4px 0px 10px gray;
+            box-shadow: 4px 0px 10px gray;
+  }
+  .header-localisation i {
+    padding: 17px;
+    margin-left: 11%;
+  }
+  .header-localisation i input {
+    background-color: #DBD9D9;
+    border: none;
+    font-size: 1.2em;
+    font-weight: 900;
+  }
+  /*PARTIE RESERVATION*/
+  .header-reservation {
+    background-color: #f2f2f2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reservation-Text {
+    width: 77%;
+    font-family: Shrikhand cursive;
+  }
+  -Paragraphe {
+    width: 77%;
+  }
+  -Paragraphe-Explorer {
+    border-radius: 30px;
+    padding: 20px;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 61px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#BE56DB));
+    background: linear-gradient(#FF79DA, #BE56DB);
+  }
+  /*PARTIE FONCTIONNEMENT*/
+  .fonction h2 {
+    margin-left: 20px;
+  }
+  .fonction h2-contenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-radius: 31px;
+    background-color: #F2F2F2;
+    margin: 24px;
+    padding: 6px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .fonction h2-contenu-contenu :active {
+    background-color: #c0a7c0;
+  }
+  .chiffre {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 50%;
+    background-color: #9356DC;
+    padding: 5px;
+    margin: 5px;
+    position: absolute;
+    left: 3%;
+    color: white;
+    font-size: 0.9rem;
+    width: 12px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .fonction-emoticone {
+    position: absolute;
+    left: 18%;
+    color: grey;
+  }
+  .fonction-emoticone-emoticone p {
+    font-size: 1.1rem;
+  }
+  /*partie carte image resto*/
+  .restaurant {
+    background-color: #f6f6f6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 20px;
+  }
+  .restaurant-Article {
+    color: black;
+    margin-bottom: 8px;
+    border-radius: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  .restaurant-Article-Liens {
+    text-decoration: none;
+    display: block;
+    position: relative;
+  }
+  .resto-Article img {
+    border-radius: 15px 15px 0px 0px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border: 0px solid transparent;
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .article-img {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+  }
+  .badge {
+    background-color: #99e2d0;
+    color: green;
+    position: absolute;
+    top: 16px;
+    right: 21px;
+    height: 8%;
+    width: 23%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .titre-resto {
+    color: black;
+    font-family: roboto;
+    font-size: 1.3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    background-color: white;
+    width: 93%;
+    border-radius: 0 0 15px 15px;
+    padding-left: 3%;
+    margin-left: 2%;
+    padding-bottom: 12px;
+  }
+  .resto-coeur {
+    position: absolute;
+    bottom: 39px;
+    right: 16px;
+    width: 33px;
+    height: 29PX;
+    font-size: 2rem;
+  }
+  /*PARTIE FOOTER*/
+  .logofooter {
+    font-family: Shrikhand, cursive;
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 33px;
+  }
+  footer {
+    background-color: #000000bf;
+    color: white;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: roboto;
+    font-size: 1.5rem;
+  }
+  .logofoter-Emoticone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-right: 16px;
+  }
+  .logofoter-Emoticone-Text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .Contact {
+    text-decoration: none;
+    color: white;
+  }
+  /*PARTIE MAQUETTE DES MENU */
+  .menunav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menunav img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 63%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .retourMenu {
+    position: absolute;
+    left: 10px;
+    font-size: 1.5rem;
+    color: black;
+    top: 1rem;
+  }
+  .menunav-image img {
+    width: 100%;
+    margin-top: 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .menunav_titre {
+    font-family: shrikhand, cursive;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .titre-coeur {
+    font-size: 1.5rem;
+  }
+  .corps {
+    background-color: #f6f6f6;
+    margin-left: -9px;
+    border-radius: 40PX 40px 0px 0px;
+    position: relative;
+    margin-top: -44px;
+  }
+  .titre-menu {
+    border-bottom: 3px solid #99e2d0;
+    width: 46px;
+  }
+  .entree1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 25PX 25PX 18px 18px;
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 7px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .menu-entree, .menu_plats, .menu-desserts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .description {
+    margin-top: -10px;
+    padding: 0px;
+  }
+  .plat {
+    margin-top: 4px;
+  }
+  .menu-prix {
+    position: absolute;
+    right: 28px;
+    margin-top: 32px;
+    font-weight: 700;
+  }
+  .commande {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#BE56DB));
+    background: linear-gradient(#FF79DA, #BE56DB);
+    border-radius: 30px;
+    width: 40%;
+    cursor: pointer;
+    height: 64px;
+    color: white;
+    font-size: 1rem;
+    margin-left: 111px;
+  }
+  .button-commande {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+    padding-bottom: 20px;
+  }
+}
+
+/*DESKTOP*/
+@media screen and (min-width: 1024px) {
+  .header-logo img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 30rem;
+    padding-bottom: 11px;
+  }
+  .header-localisation {
+    background-color: #DBD9D9;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 4px 0px 10px gray;
+            box-shadow: 4px 0px 10px gray;
+  }
+  .header-localisation i {
+    padding: 17px;
+    margin-left: 11%;
+  }
+  .header-localisation input {
+    background-color: #DBD9D9;
+    border: none;
+    font-size: 1.2em;
+    font-weight: 900;
+  }
+  /*PARTIE RESERVATION*/
+  .header-reservation {
+    background-color: #f2f2f2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reservation-Text {
+    font-family: shrikhand,cursive;
+  }
+  .reservation-Paragraphe {
+    font-size: 1.5rem;
+  }
+  .reservation-Explorer {
+    border-radius: 30px;
+    padding: 20px;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 61px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#BE56DB));
+    background: linear-gradient(#FF79DA, #BE56DB);
+  }
+  /*PARTIE FONCTIONNEMENT*/
+  .fonction {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .fonction h2, .restaurant h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-family: shrikhand,cursive;
+  }
+  .fonction-contenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-radius: 31px;
+    background-color: #F2F2F2;
+    margin: 24px;
+    padding: 6px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 20%;
+  }
+  .fonction-contenu :active {
+    background-color: #c0a7c0;
+  }
+  .chiffre {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 50%;
+    background-color: #9356DC;
+    padding: 5px;
+    margin: 5px;
+    position: absolute;
+    color: white;
+    font-size: 0.9rem;
+    width: 12px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: -262PX;
+  }
+  .fonction-emoticone {
+    color: grey;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-right: 29px;
+  }
+  .fonction-emoticone p {
+    font-size: 1.1rem;
+  }
+  .restaurant-contenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .restaurant {
+    background-color: #f6f6f6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .resto-Article {
+    color: black;
+    margin-bottom: 8px;
+    border-radius: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* flex-direction: column; */
+    margin-bottom: 30px;
+    cursor: pointer;
+    width: 30%;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .resto-Liens {
+    text-decoration: none;
+    display: block;
+    position: relative;
+  }
+  .resto-Article img {
+    border-radius: 15px 15px 0px 0px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border: 0px solid transparent;
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .article-img {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+  }
+  .badge {
+    background-color: #99e2d0;
+    color: green;
+    position: absolute;
+    top: 16px;
+    right: 21px;
+    height: 8%;
+    width: 23%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .titre-resto {
+    color: black;
+    font-family: roboto;
+    font-size: 1.3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    background-color: white;
+    width: 93%;
+    border-radius: 0 0 15px 15px;
+    padding-left: 3%;
+    margin-left: 2%;
+    padding-bottom: 12px;
+  }
+  .resto-coeur {
+    position: absolute;
+    bottom: 39px;
+    right: 16px;
+    width: 33px;
+    height: 29PX;
+    font-size: 2rem;
+  }
+  /*PARTIE FOOTER*/
+  .logofooter {
+    font-family: Shrikhand, cursive;
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 33px;
+  }
+  footer {
+    background-color: #000000bf;
+    color: white;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1.2rem;
+  }
+  .logofoter-Emoticone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-right: 16px;
+  }
+  .logofooter-Text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .Contact {
+    text-decoration: none;
+    color: white;
+  }
+}
+/*# sourceMappingURL=style.css.map */
