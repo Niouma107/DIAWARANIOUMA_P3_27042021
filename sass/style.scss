@@ -1,14 +1,17 @@
+
+@import 'variables/font';
+@import 'mixins/flexbox';
 @media screen and  (max-width:420px) {
     
- html,body{
- margin: 0%;
- font-family: roboto,sans-serif;	
- }
+    html,body{
+        margin: 0%;
+        font-family: $fonts1;	
+    }
         
   /*PARTIE logo oh my food*/
     .logo{
         text-align: center;
-    
+        
   
              & img{
                 width: 50%;
@@ -19,9 +22,7 @@
         /*PARTIE LOCALISATION IMPUT*/
         .localisation {
             background-color: #DBD9D9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+           @include flexbox();
             box-shadow: 0px 0px 5px gray;
         
                 & i{
@@ -35,63 +36,52 @@
             border: none;
             font-size: 1.2em;
             font-weight: 900;
-            font-family: roboto,sans-serif;
+            font-family: $fonts1;
         }
      
     
         /*PARTIE RESERVATION*/
         .reservation {
             background-color: #f2f2f2;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            @include flexbox();
+           
         
-            .reservation_text {
+            .reservation__text {
                   width: 77%;
-                 font-family: roboto,sans-serif;
+                 font-family:$fonts1;
       
             }
         }
-            .reservation_paragraphe {
+            .reservation__paragraphe {
                  width: 80%;
-                font-family: roboto,sans-serif;
+                font-family: $fonts1;
             }
-                .reservation_explorer {
-                    border-radius: 30px;
-                    padding: 20px;
-                    color: white;
-                    font-size: 1rem;
-                    margin-bottom: 61px;
-                    background: linear-gradient(#FF79DA,#BE56DB);
-                }
-          
+           
+            .reservation__explorer {
+               @include button1();
+            }
         
       
         /*PARTIE FONCTIONNEMENT*/
         .fonction h2, .restaurant h2{
             margin-left: 20px;
         }
-            .fonction-contenu {
-                display: flex;
-                flex-wrap: wrap;
+            .fonction__contenu {
+                @include flexbox();
                 border-radius: 31px;
                 background-color: #F2F2F2;
                 margin: 24px;
                 padding: 6px;
-                align-items: center;
-                justify-content: center;
                 cursor: pointer;
                 &:active{
                     background-color:#d9a7d9
                 }
             }                
       
-        .chiffre {
-            display: flex;
+        .fonction__chiffre {
+            @include flexbox();
             border-radius: 50%;
-            background-color: #9356DC;
+            background-color:$primary-color;
             padding: 5px;
             margin: 5px;
             position: absolute;
@@ -99,10 +89,9 @@
             color: white;
             font-size: 0.9rem;
             width: 12px;
-            align-items: center;
-            justify-content: center;
+            
         }
-        .fonction-emoticone {
+        .fonction__emoticone {
             position: absolute;
             left: 18%;
             color: grey;
@@ -119,7 +108,7 @@
             justify-content: center;
             padding-bottom: 20px;
         
-            &-article {
+            &__article {
                 color: black;
                 margin-bottom: 8px;
                 border-radius: 15px;
@@ -140,42 +129,36 @@
             } 
             
      
-        .restaurant-article img {
+        .restaurant__img img {
         
                 border-radius: 15px 15px 0px 0px;
                 object-fit: cover;
                 border: 0px solid transparent;
                 width: 88%;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
+                @include flexbox();
                 box-shadow: none;
         }
         
-        .article-img {
+        .restaurant__img {
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+           @include flexbox();
             text-decoration: none;
         }
         .badge {
-            background-color: #99e2d0;
+            background-color: $tertiary-color;
             color: green;
             position: absolute;
             top: 16px;
             right: 34px;
             height: 8%;
             width: 23%;
-            display: flex;
-            align-items: center;
+           @include flexbox();
             font-size: 1.1rem;
-            justify-content: center;
+            
         }
-        .titre-resto {
+        .restaurant__titre {
             color: black;
-            font-family: roboto,sans-serif;
+            font-family: $fonts1;
             font-size: 1.3rem;
             display: flex;
             flex-direction: column;
@@ -187,25 +170,28 @@
             margin-left: 6%;
             padding-bottom: 12px;
             box-shadow: 4px 6px 2px #e3e0e0;
-            }
+        }
         
-        .resto-coeur {
+        .restaurant__coeur {
             position: absolute;
             bottom: 39px;
             right: 31px;
             width: 33px;
             height: 29PX;
             font-size: 2rem;
-            &:active{
-                background: linear-gradient(#FF79DA,#BE56DB);
-            } 
+            transition: color 3s;
+        } 
+        .restaurant__coeur:hover{
+            background: linear-gradient($secondary-color,$primary-color);
+            border:none;
         }
+
         
         
         /*PARTIE FOOTER*/
         .logofooter{
             
-            font-family:Shrikhand, cursive ;
+            font-family:$fonts2 ;
             font-size: 1.5rem;
             color: white;
             margin-left: 33px;
@@ -220,22 +206,22 @@
        
         
             
-        & ul{
+            & ul{
             
                 list-style: none;
                 display: flex;
                 flex-direction: column;
-                font-family: roboto;
+                font-family:$fonts1;
                 font-size: 1.5rem;
             
+            }
         }
-     }
-        .logofoter-Emoticone {
+        .logofoter__emoticone {
             display: flex;
             flex-direction: row;
             margin-right: 16px;
         }
-        .logofooter-Text {
+        .logofooter__text {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -247,63 +233,53 @@
         
         /*PARTIE MAQUETTE DES MENU */
         .menunav {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
+            @include flexbox();
 
             & img {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
+               @include flexbox();
                 width: 63%;
-                flex-wrap: wrap;
                 margin-top: 8px;
             
             }
 
         }
-        
-        
        
-        .retourMenu {
+        .retour__menu {
             position: absolute;
             left: 10px;
             font-size: 1.5rem;
             color: black;
             top: 1rem;
         }
-        .menunav-image img{
+        .menunav__image img{
                 width: 100%;
                 margin-top: 10px;
                 object-fit: cover;
                 
         }
-            .menunav_titre {
-                font-family: shrikhand;
+            .menunav__titre {
+                font-family: $fonts2;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
                 align-items: center;
             
-        }
-            .titre-coeur {
+            }
+            .titre__coeur {
                 font-size: 1.5rem;
-        }
+            }
         .corps {
             background-color: #f6f6f6;
             border-radius: 40PX 40px 0px 0px;
             position: relative;
             margin-top: -44px;
         }
-            .titre-menu {
-            border-bottom: 3px solid #99e2d0;
-            width: 46px;
-            font-family:roboto,sans-serif ;
-            margin-left: 5px;
-        }
+            .titre__menu {
+                border-bottom: 3px solid #99e2d0;
+                width: 46px;
+                font-family:$fonts1 ;
+                margin-left: 5px;
+            }
         
         
         .entree1 {
@@ -318,11 +294,13 @@
             margin-right: 0.5rem;
              cursor: pointer;   
         }
-        .menu-entree,.menu_plats,.menu-desserts {
+        .menu__entree,.menu__plats,.menu__desserts {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            
+            &:hover{
+                transform: scale(2);
+            }
         }
         .description {
             margin-top: -10px;
@@ -331,54 +309,42 @@
         .plat {
             margin-top: 4px;
         }
-        .menu-prix {
+        .menu__prix {
             position: absolute;
             right: 28px;
             margin-top: 32px;
             font-weight: 700;
         }
         .commande {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(#FF79DA,#BE56DB);
-            border-radius: 30px;
-            width: 40%;
-            cursor: pointer;
-            height: 64px;
-            color: white;   
-            font-size: 1rem;
-            margin-left: 111px;
+          @include button      
         }
-        .button-commande {
+        .button__commande {
             display: flex;
             margin-top: 10px;
             padding-bottom: 20px;
         }
-            } 
+} 
         
 /*DESKTOP*/
 @media screen and (min-width:1024px) {
-	.header-logo img {
+	.logo img {
 		display: flex;
 		flex-wrap: wrap;
 		margin-left: 30rem;
 		padding-bottom: 11px;
 	}
-	.header-localisation {
+	.localisation {
 		background-color: #DBD9D9;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include flexbox();
 		box-shadow: 4px 0px 10px gray;
 	}
 
-.header-localisation i{
-padding: 17px;
-margin-left: 11%;
+.localisation i{
+    padding: 17px;
+    margin-left: 11%;
 
 }
-.header-localisation input {
+.localisation input {
 	background-color: #DBD9D9;
 	border: none;
 	font-size: 1.2em;
@@ -387,29 +353,31 @@ margin-left: 11%;
 }
 
 /*PARTIE RESERVATION*/
-.header-reservation {
+.reservation {
 	background-color: #f2f2f2;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	@include flexbox();
+    height: 199PX;
 }
-.reservation-Text {
-	font-family: shrikhand,cursive;
+.reservation__text {
+	font-family: $fonts2;
 	
 }
-.reservation-Paragraphe {
+.reservation__paragraphe {
    font-size: 1.5rem;
+   font-family: $fonts2;
+   margin-top: 59px;
+
 }
-.reservation-Explorer {
-	
+.reservation__explorer {
+    position: absolute;
+    top: 209px;
 	border-radius: 30px;
 	padding: 20px;
 	color: white;
 	font-size: 1rem;
 	margin-bottom: 61px;
 	background: linear-gradient(#FF79DA,#BE56DB);
+    cursor: pointer;
 }
 
 /*PARTIE FONCTIONNEMENT*/
@@ -424,68 +392,62 @@ margin-left: 11%;
 
 .fonction h2,.restaurant h2{
 	display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-	font-family: shrikhand,cursive;
+    flex-direction: column;
+    flex-wrap: wrap;
+	font-family: $fonts2;
 }
-.fonction-contenu {
-	display: flex;
-	flex-wrap: wrap;
+.fonction__contenu {
+	@include flexbox();
 	border-radius: 31px;
 	background-color: #F2F2F2;
 	margin: 24px;
 	padding: 6px;
-	align-items: center;
-	justify-content: center;
 	width: 20%;
 }
-.fonction-contenu :active{
+.fonction__contenu :active{
 	background-color: rgb(192, 167, 192);
 }
-.chiffre {
-	display: flex;
+.fonction__chiffre {
+	@include flexbox();
 	border-radius: 50%;
-	background-color: #9356DC;
+	background-color: $primary-color;
 	padding: 5px;
 	margin: 5px;
 	position: absolute;
 	color: white;
 	font-size: 0.9rem;
 	width: 12px;
-	align-items: center;
-	justify-content: center;
 	margin-left: -262PX;
 }
-.fonction-emoticone {
+.fonction__emoticone {
 	color: grey;
 		display: flex;
 		justify-content: flex-start;
 		margin-right: 29px;
 	
 }
-.fonction-emoticone p{
+.fonction__emoticone p{
 	font-size: 1.1rem;
 }
 
-.restaurant-contenu {
+.restaurant__contenu {
 	display: flex;
 	flex-wrap: wrap;
+    justify-content: space-between;
 }
 .restaurant {
 	background-color: #f6f6f6;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
 	flex-wrap: wrap;
 	
 }
 
-.resto-Article {
+.restaurant__article {
 	color: black;
 	margin-bottom: 8px;
 	border-radius: 15px;
 	display: flex;
-	/* flex-direction: column; */
 	margin-bottom: 30px;
 	cursor: pointer;
 	width: 30%;
@@ -496,45 +458,38 @@ flex-wrap: wrap;
 }
 
 
-.resto-Liens {
+.restaurant__liens {
 	text-decoration: none;
 	display: block;
 	position: relative;
 }
-.resto-Article img {
+.restaurant__article img {
 
 		border-radius: 15px 15px 0px 0px;
 		object-fit: cover;
 		border: 0px solid transparent;
 		width: 95%;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
+		@include flexbox();
 		box-shadow: none;
 }
 
-.article-img {
+.article__img {
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include flexbox();
 	text-decoration: none;
 }
 .badge {
-	background-color: #99e2d0;
+	background-color: $tertiary-color;
 	color: green;
 	position: absolute;
 	top: 16px;
 	right: 21px;
 	height: 8%;
 	width: 23%;
-	display: flex;
-	align-items: center;
 	font-size: 1.1rem;
-	justify-content: center;
+	@include flexbox();
 }
-.titre-resto {
+.restaurant__titre {
 	color: black;
 	font-family: roboto;
 	font-size: 1.3rem;
@@ -547,9 +502,9 @@ flex-wrap: wrap;
 	padding-left: 3%;
 	margin-left: 2%;
 	padding-bottom: 12px;
-	}
+}
 
-.resto-coeur {
+.restaurant__coeur {
 	position: absolute;
 	bottom: 39px;
 	right: 16px;
@@ -557,11 +512,15 @@ flex-wrap: wrap;
 	height: 29PX;
 	font-size: 2rem;
 }
+.restaurant__coeur:hover{
+    background: linear-gradient($secondary-color,$primary-color);
+    border:none;
+}
 
 /*PARTIE FOOTER*/
 .logofooter{
 	
-	font-family:Shrikhand, cursive ;
+	font-family:$fonts2 ;
 	font-size: 1.5rem;
 	color: white;
 	margin-left: 33px;
@@ -584,12 +543,12 @@ footer ul{
 		font-size: 1.2rem;
 	
 }
-.logofoter-Emoticone {
+.logofoter__emoticone {
 	display: flex;
 	flex-direction: row;
 	margin-right: 16px;
 }
-.logofooter-Text {
+.logofooter__text {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -600,6 +559,3 @@ footer ul{
 }
 
 }
-
-        
-        
