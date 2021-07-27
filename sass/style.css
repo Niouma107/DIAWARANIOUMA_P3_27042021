@@ -73,6 +73,11 @@
     background: linear-gradient(#FF79DA, #9356DC);
     font-family: Roboto, sans-serif;
   }
+  .reservation__explorer:hover {
+    background-color: #fff;
+    -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  }
   /*PARTIE FONCTIONNEMENT*/
   .fonction h2, .restaurant h2 {
     margin-left: 20px;
@@ -156,12 +161,10 @@
             flex-direction: column;
     margin-bottom: 30px;
     cursor: pointer;
-    -webkit-transform: scale(1);
-            transform: scale(1);
   }
   .restaurant__article:hover {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   .restaurant__liens {
     text-decoration: none;
@@ -253,13 +256,12 @@
     width: 33px;
     height: 29PX;
     font-size: 2rem;
-    -webkit-transition: color 3s;
-    transition: color 3s;
   }
   .restaurant__coeur:hover {
     background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
     background: linear-gradient(#FF79DA, #9356DC);
-    border: none;
+    opacity: 1;
+    background-color: white;
   }
   /*PARTIE FOOTER*/
   .logofooter {
@@ -391,6 +393,10 @@
     font-family: Roboto, sans-serif;
     margin-left: 5px;
   }
+  .carte__menu {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
   .entree1 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -456,6 +462,11 @@
     color: white;
     font-size: 1rem;
     margin-left: 111px;
+  }
+  .commande:hover {
+    background-color: #fff;
+    -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   }
   .button__commande {
     display: -webkit-box;
@@ -539,6 +550,13 @@
     background: linear-gradient(#FF79DA, #BE56DB);
     cursor: pointer;
   }
+  .reservation__explorer:hover {
+    background-color: #fff;
+    -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
   /*PARTIE FONCTIONNEMENT*/
   .fonction {
     display: -webkit-box;
@@ -587,8 +605,11 @@
     padding: 6px;
     width: 20%;
   }
-  .fonction__contenu :active {
-    background-color: #c0a7c0;
+  .fonction__contenu:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    cursor: pointer;
+    background-color: #D7D4D4;
   }
   .fonction__chiffre {
     display: -webkit-box;
@@ -631,9 +652,8 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .restaurant {
     background-color: #f6f6f6;
@@ -656,12 +676,17 @@
     display: flex;
     margin-bottom: 30px;
     cursor: pointer;
-    width: 30%;
+    width: 26%;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .restaurant__article:hover {
+    -webkit-transform: scale(1.1) rotate(5deg);
+            transform: scale(1.1) rotate(5deg);
   }
   .restaurant__liens {
     text-decoration: none;
@@ -708,7 +733,7 @@
     color: green;
     position: absolute;
     top: 16px;
-    right: 21px;
+    right: 30px;
     height: 8%;
     width: 23%;
     font-size: 1.1rem;
@@ -741,7 +766,6 @@
     width: 93%;
     border-radius: 0 0 15px 15px;
     padding-left: 3%;
-    margin-left: 2%;
     padding-bottom: 12px;
   }
   .restaurant__coeur {
@@ -755,7 +779,9 @@
   .restaurant__coeur:hover {
     background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
     background: linear-gradient(#FF79DA, #9356DC);
-    border: none;
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   /*PARTIE FOOTER*/
   .logofooter {
@@ -771,12 +797,19 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   footer ul {
     list-style: none;
@@ -813,6 +846,188 @@
   .Contact {
     text-decoration: none;
     color: white;
+  }
+}
+
+/*PARTIE MAQUETTE DES MENU */
+@media screen and (min-width: 1024px) {
+  .menunav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menunav img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 8px;
+  }
+  .retour__menu {
+    position: absolute;
+    left: 10px;
+    font-size: 1.5rem;
+    color: black;
+  }
+  .menunav__image img {
+    width: 100%;
+    margin-top: 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-height: 32rem;
+  }
+  .menunav__titre {
+    font-family: "Shrikhand", cursive;
+    padding: 1rem 2rem 0 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .titre__coeur {
+    font-size: 1.5rem;
+  }
+  .corps {
+    background-color: #f6f6f6;
+    border-radius: 40PX 40px 0px 0px;
+    position: relative;
+    margin-top: -99px;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .titre__menu {
+    border-bottom: 3px solid #99e2d0;
+    width: 46px;
+    font-family: Roboto, sans-serif;
+    margin-left: 5px;
+  }
+  .carte__menu {
+    margin-left: 163px;
+    width: 72%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .entree1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 25PX 25PX 18px 18px;
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 7px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+  .menu__entree, .menu__desserts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  .menu__plats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+  }
+  .description {
+    margin-top: -10px;
+    padding: 0px;
+  }
+  .plat {
+    margin-top: 4px;
+  }
+  .menu__prix {
+    position: absolute;
+    right: 28px;
+    margin-top: 32px;
+    font-weight: 700;
+  }
+  .commande {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+    background: linear-gradient(#FF79DA, #9356DC);
+    border-radius: 30px;
+    width: 40%;
+    cursor: pointer;
+    height: 64px;
+    color: white;
+    font-size: 1rem;
+    margin-left: 111px;
+    width: 30%;
+  }
+  .commande:hover {
+    background-color: #fff;
+    -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  .button__commande {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

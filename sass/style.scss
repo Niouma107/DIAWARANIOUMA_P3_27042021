@@ -59,6 +59,9 @@
            
             .reservation__explorer {
                @include button1();
+               &:hover{ background-color: #fff;
+                    box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
+                } 
             }
         
       
@@ -116,9 +119,9 @@
                 flex-direction: column;
                 margin-bottom: 30px;
                 cursor: pointer;
-                transform: scale(1);
+                
                 &:hover{
-                    transform: scale(1.5);
+                    transform: scale(1.1);
                 }
             } 
         }      
@@ -179,11 +182,12 @@
             width: 33px;
             height: 29PX;
             font-size: 2rem;
-            transition: color 3s;
+            
         } 
         .restaurant__coeur:hover{
             background: linear-gradient($secondary-color,$primary-color);
-            border:none;
+           opacity: 1;
+           background-color: white;
         }
 
         
@@ -280,7 +284,10 @@
                 font-family:$fonts1 ;
                 margin-left: 5px;
             }
-        
+            .carte__menu {
+                margin-left: 7px;
+                margin-right: 7px;
+            }
         
         .entree1 {
             display: flex;
@@ -316,18 +323,24 @@
             font-weight: 700;
         }
         .commande {
-          @include button      
+          @include button ;  
+            &:hover{ background-color: #fff;
+                box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
+            }  
         }
         .button__commande {
             display: flex;
             margin-top: 10px;
             padding-bottom: 20px;
+           
         }
 } 
         
 /*DESKTOP*/
 @media screen and (min-width:1024px) {
-	.logo img {
+	
+    
+    .logo img {
 		display: flex;
 		flex-wrap: wrap;
 		margin-left: 30rem;
@@ -378,6 +391,10 @@
 	margin-bottom: 61px;
 	background: linear-gradient(#FF79DA,#BE56DB);
     cursor: pointer;
+    &:hover{ background-color: #fff;
+        box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
+        transform: scale(1.1);
+    } 
 }
 
 /*PARTIE FONCTIONNEMENT*/
@@ -404,9 +421,13 @@
 	padding: 6px;
 	width: 20%;
 }
-.fonction__contenu :active{
-	background-color: rgb(192, 167, 192);
+.fonction__contenu:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+	background-color: #D7D4D4;
 }
+
+
 .fonction__chiffre {
 	@include flexbox();
 	border-radius: 50%;
@@ -433,8 +454,9 @@
 .restaurant__contenu {
 	display: flex;
 	flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+
 .restaurant {
 	background-color: #f6f6f6;
 	display: flex;
@@ -450,13 +472,15 @@
 	display: flex;
 	margin-bottom: 30px;
 	cursor: pointer;
-	width: 30%;
+	width: 26%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	flex-wrap: wrap;
 
 }
-
+.restaurant__article:hover {
+	transform: scale(1.1) rotate(5deg);
+}
 
 .restaurant__liens {
 	text-decoration: none;
@@ -483,7 +507,7 @@
 	color: green;
 	position: absolute;
 	top: 16px;
-	right: 21px;
+	right: 30px;
 	height: 8%;
 	width: 23%;
 	font-size: 1.1rem;
@@ -500,7 +524,6 @@
     width: 93%;
 	border-radius: 0 0 15px 15px;
 	padding-left: 3%;
-	margin-left: 2%;
 	padding-bottom: 12px;
 }
 
@@ -514,7 +537,8 @@
 }
 .restaurant__coeur:hover{
     background: linear-gradient($secondary-color,$primary-color);
-    border:none;
+    opacity: 1;
+    transform: scale(1.2);
 }
 
 /*PARTIE FOOTER*/
@@ -525,14 +549,17 @@
 	color: white;
 	margin-left: 33px;
 }
-footer {
-	background-color: #000000bf;
-    color: white;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
+
+    footer {
+        background-color: #000000bf;
+        color: white;
+        list-style: none;
+       @include flexbox();
+        flex-direction: column;
+       flex-wrap: wrap;
+       
+    }
+
 
 	
 footer ul{
@@ -559,3 +586,121 @@ footer ul{
 }
 
 }
+     /*PARTIE MAQUETTE DES MENU */
+    
+     @media screen and (min-width:1024px) {
+        
+    
+     .menunav {
+        @include flexbox();
+
+        & img {
+           @include flexbox();
+            
+            margin-top: 8px;
+        
+        }
+
+    }
+   
+    .retour__menu {
+        position: absolute;
+        left: 10px;
+        font-size: 1.5rem;
+        color: black;
+        
+    }
+    .menunav__image img{
+            width: 100%;
+            margin-top: 10px;
+            object-fit: cover;
+            max-height: 32rem;
+    }
+        .menunav__titre {
+            font-family: $fonts2;
+            padding: 1rem 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        
+        }
+        .titre__coeur {
+            font-size: 1.5rem;
+        }
+    .corps {
+        background-color: #f6f6f6;
+        border-radius: 40PX 40px 0px 0px;
+        position: relative;
+        margin-top: -99px;
+        margin-right: 30px;
+        margin-left: 30px;
+        
+
+    }
+
+        .titre__menu {
+            border-bottom: 3px solid #99e2d0;
+            width: 46px;
+            font-family:$fonts1 ;
+            margin-left: 5px;
+        }
+        .carte__menu {
+            margin-left: 163px;
+             width: 72%;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+                
+        }
+    
+    .entree1 {
+        display: flex;
+        flex-direction: column;
+        border-radius: 25PX 25PX 18px 18px;
+        background-color: white;
+        margin-bottom: 10px;
+        padding: 7px;
+        flex-wrap: wrap;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+         cursor: pointer;   
+    }
+    .menu__entree,.menu__desserts {
+        display:flex;
+        flex-direction:column;
+        animation-delay: 1s;
+    }
+    .menu__plats{
+        display:flex;
+        flex-direction:column;
+        animation-delay: 10s;   
+    }
+    .description {
+        margin-top: -10px;
+        padding: 0px;
+    }
+    .plat {
+        margin-top: 4px;
+    }
+    .menu__prix {
+        position: absolute;
+        right: 28px;
+        margin-top: 32px;
+        font-weight: 700;
+    }
+    .commande {
+      @include button() ;
+        width: 30%; 
+      &:hover{ background-color: #fff;
+            box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
+            cursor: pointer;
+            
+        }     
+    }
+    .button__commande {
+        display: flex;
+        margin-top: 10px;
+        padding-bottom: 10px;
+       @include flexbox();
+    }
+} 
