@@ -484,6 +484,27 @@ footer ul{
 
 /**********tablette**************/
 @media only screen and(max-width: 768px){
+    
+    .logo{
+        text-align: center;
+    }
+    .logo img{
+        margin-left: 2px;
+       
+    }
+    .fonction__contenu{
+        margin:15px;
+        width: 80%;
+    }
+    .fonction__chiffre{
+        width: 28%;
+        left: 64px;
+    }
+    .restaurant__article{
+    width:45% ;
+    }
+    
+    
     .carte__menu{
         display: flex;
         flex-direction: column;
