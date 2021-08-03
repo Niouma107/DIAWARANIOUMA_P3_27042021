@@ -498,7 +498,8 @@
     color: white;
     margin-left: 20px;
   }
-  /*PARTIE MAQUETTE DES MENU */
+  /***************MENU DES RESTO DESKTOP*******************************
+     /*PARTIE MAQUETTE DES MENU */
   .menunav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -537,7 +538,7 @@
     margin-top: 10px;
     -o-object-fit: cover;
        object-fit: cover;
-    max-height: 32rem;
+    max-height: 28rem;
   }
   .menunav__titre {
     font-family: "Shrikhand", cursive;
@@ -552,18 +553,43 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .menu__coeur {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .titre__coeur {
-    font-size: 1.5rem;
-    -webkit-transition: 1s  -webkit-animation coeur 1s ease-in-out;
-    transition: 1s  -webkit-animation coeur 1s ease-in-out;
-    transition: 1s  animation coeur 1s ease-in-out;
-    transition: 1s  animation coeur 1s ease-in-out, 1s  -webkit-animation coeur 1s ease-in-out;
+    cursor: pointer;
+    right: -30px;
+    position: relative;
+    font-size: 2rem;
   }
   .titre__coeur:hover {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
+    opacity: 1;
+  }
+  .titre__coeur2 {
+    color: transparent;
+    font-size: 2rem;
+    -webkit-transition: 2s  -webkit-animation coeur 1s ease-in-out;
+    transition: 2s  -webkit-animation coeur 1s ease-in-out;
+    transition: 2s  animation coeur 1s ease-in-out;
+    transition: 2s  animation coeur 1s ease-in-out, 2s  -webkit-animation coeur 1s ease-in-out;
+    cursor: pointer;
+  }
+  .titre__coeur2:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
     -webkit-animation: coeur 1s ease-in-out;
             animation: coeur 1s ease-in-out;
+    opacity: 1;
   }
   .corps {
     background-color: #f6f6f6;
@@ -628,11 +654,13 @@
     margin-top: -10px;
     padding: 0px;
     text-overflow: ellipsis;
+    overflow: hidden;
     white-space: nowrap;
   }
   .plat {
     margin-top: 4px;
     text-overflow: ellipsis;
+    overflow: hidden;
     white-space: nowrap;
   }
   .menu__prix {
@@ -645,6 +673,7 @@
     padding-right: 70px;
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
+    cursor: pointer;
   }
   .check {
     display: -webkit-box;
@@ -739,6 +768,28 @@
   }
 }
 
+/**********tablette**************/
+@media only screen and (max-width: 768px) {
+  .carte__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu__animation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+}
+
+/*****************MOBILE************************/
 @media only screen and (max-width: 420px) {
   html, body {
     margin: 0%;
@@ -997,11 +1048,14 @@
     height: 29PX;
     font-size: 2rem;
   }
-  .restaurant__coeur:hover {
-    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-    background: linear-gradient(#FF79DA, #9356DC);
-    opacity: 1;
-    background-color: white;
+  .restaurant__coeur1 {
+    position: absolute;
+    bottom: 39px;
+    right: 31px;
+    width: 33px;
+    height: 29PX;
+    font-size: 2rem;
+    color: transparent;
   }
   /*PARTIE FOOTER*/
   .logofooter {
@@ -1118,8 +1172,23 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  .menu__coeur {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .titre__coeur {
     font-size: 1.5rem;
+  }
+  .titre__coeur2 {
+    color: transparent;
+    font-size: 2rem;
   }
   .corps {
     background-color: #f6f6f6;
