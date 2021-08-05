@@ -127,6 +127,7 @@
   * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    font-family: Roboto, sans-serif;
   }
   .localisation i {
     padding: 17px;
@@ -137,6 +138,7 @@
     border: none;
     font-size: 1.2em;
     font-weight: 900;
+    font-family: Roboto, sans-serif;
   }
   /*PARTIE RESERVATION*/
   .reservation {
@@ -144,30 +146,33 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    height: 202px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 156px;
   }
   .reservation__text {
     font-family: Roboto, sans-serif;
-    margin-top: -94px;
+    margin-top: -43px;
+    margin-left: 37px;
     font-size: 1.5rem;
   }
   .reservation__paragraphe {
     font-size: 1.2rem;
     font-family: Roboto, sans-serif;
-    margin-top: -12px;
-    margin-left: -483px;
+    margin-left: 58px;
   }
   .reservation__explorer {
     position: absolute;
-    top: 220px;
+    top: 262px;
     border-radius: 30px;
     padding: 20px;
     color: white;
@@ -176,6 +181,7 @@
     background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#BE56DB));
     background: linear-gradient(#FF79DA, #BE56DB);
     cursor: pointer;
+    font-family: Roboto, sans-serif;
   }
   .reservation__explorer:hover {
     background-color: #fff;
@@ -397,6 +403,7 @@
     padding-left: 3%;
     padding-bottom: 12px;
     position: relative;
+    font-family: Roboto, sans-serif;
   }
   .restaurant__coeur {
     position: absolute;
@@ -595,7 +602,7 @@
     background-color: #f6f6f6;
     border-radius: 40PX 40px 0px 0px;
     position: relative;
-    margin-top: -99px;
+    margin-top: -102px;
     margin-right: 30px;
     margin-left: 30px;
     font-family: Roboto, sans-serif;
@@ -616,6 +623,9 @@
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .entree1 {
     display: -webkit-box;
@@ -634,9 +644,17 @@
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     cursor: pointer;
+    font-family: Roboto, sans-serif;
+  }
+  .entree1:hover {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+  }
+  :hover > .menu__prix {
+    padding-right: 50px;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
   }
   .menu__animation {
     -webkit-box-orient: vertical;
@@ -656,21 +674,45 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    font-family: Roboto, sans-serif;
+  }
+  .description:hover, .description :active {
+    width: 70%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
   .plat {
     margin-top: 4px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    font-family: Roboto, sans-serif;
+  }
+  .menu__prix__check {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu__prix__check:hover > .menu__prix {
+    padding-right: 50px;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
   }
   .menu__prix {
     position: absolute;
     right: 50px;
-    margin-top: 32px;
+    margin-top: -67px;
     font-weight: 700;
   }
   .menu__prix:hover {
-    padding-right: 70px;
+    padding-right: 50px;
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
     cursor: pointer;
@@ -694,7 +736,7 @@
     height: 24%;
     border-radius: 0PX 18px 18px 0px;
     color: white;
-    margin-top: -7px;
+    margin-top: -73px;
     opacity: 0;
     cursor: pointer;
   }
@@ -705,17 +747,17 @@
     -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
             animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
+  .check:hover > .far.fa-check-circle {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-animation: rotate-center 0.6s ease-in-out both;
+            animation: rotate-center 0.6s ease-in-out both;
+  }
   .far.fa-check-circle {
     cursor: pointer;
     font-size: 1.5em;
     -webkit-transform-origin: center;
             transform-origin: center;
-  }
-  .far.fa-check-circle:hover {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    -webkit-animation: rotate-center 0.6s ease-in-out both;
-            animation: rotate-center 0.6s ease-in-out both;
   }
   .commande {
     display: -webkit-box;
@@ -781,8 +823,9 @@
     width: 80%;
   }
   .fonction__chiffre {
-    width: 28%;
-    left: 64px;
+    width: 4%;
+    left: 66px;
+    margin-left: 0;
   }
   .restaurant__article {
     width: 45%;
@@ -969,6 +1012,7 @@
             flex-direction: column;
     margin-bottom: 30px;
     cursor: pointer;
+    width: 100%;
   }
   .restaurant__article:hover {
     -webkit-transform: scale(1.1);
@@ -1268,7 +1312,7 @@
   .menu__prix {
     position: absolute;
     right: 28px;
-    margin-top: 32px;
+    margin-top: -39px;
     font-weight: 700;
   }
   .check {
@@ -1283,13 +1327,26 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: green;
+    background-color: #99E2D0;
     width: 10%;
     position: absolute;
     left: 89%;
     height: 67PX;
     border-radius: 0PX 10px 10px 0px;
     opacity: 0;
+  }
+  .check:active {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    opacity: 1;
+    -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  .check:active > .far.fa-check-circle {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-animation: rotate-center 0.6s ease-in-out both;
+            animation: rotate-center 0.6s ease-in-out both;
   }
   .commande {
     display: -webkit-box;
