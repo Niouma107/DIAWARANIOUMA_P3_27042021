@@ -4,9 +4,8 @@
 @import './animation/keyframes';
     
 /*DESKTOP*/
-@media only screen and(min-width:500px){
-    
 
+    
 html,body{
     margin: 0%;
     font-family: $fonts1;	
@@ -470,10 +469,10 @@ footer ul{
             width: 16%;
             position: absolute;
             right: 1%;
-            height: 24%;
+            height: 20%;
             border-radius: 0PX 18px 18px 0px;
             color: white;
-            margin-top: -73px;
+            margin-top: -69px;
             opacity:0;
              cursor: pointer;
             &:hover{
@@ -513,7 +512,7 @@ footer ul{
         animation: menu 2s forwards ;
         transform-origin: top;
     }
-}   
+  
 
 /**********tablette**************/
 @media only screen and(max-width: 768px){
