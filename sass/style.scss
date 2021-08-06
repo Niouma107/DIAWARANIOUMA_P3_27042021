@@ -10,6 +10,14 @@ html,body{
     margin: 0%;
     font-family: $fonts1;	
 }
+.loader{
+    border: 10px solid #F3F3F3;
+    width: 100px;
+    height: 100px;
+    border-top:10px solid $primary-color;
+    border-bottom: 10px solid $secondary-color;
+    border-radius: 50%;
+}
     .logo img {
 		
 		margin-left: 30rem;
@@ -87,7 +95,7 @@ html,body{
 	display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-	font-family: $fonts1;
+	
     width: 100%;
     margin-left: 2%
 }
@@ -403,12 +411,12 @@ footer ul{
                
             }
 
-    }
+   
     &:hover > .menu__prix{
         padding-right: 50px;
         transition: 0.5s ease;   
      }
-
+ }
     .menu__animation{
         flex-direction: column;
         display: flex;
