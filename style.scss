@@ -1,7 +1,7 @@
 
-@import './variables/font';
-@import './mixins/flexbox';
-@import './animation/keyframes';
+@import './sass/variables/font';
+@import "./sass/mixins/flexbox";
+@import "./sass/animation/keyframes";
     
 /*DESKTOP*/
 
@@ -17,6 +17,12 @@ html,body{
     border-top:10px solid $primary-color;
     border-bottom: 10px solid $secondary-color;
     border-radius: 50%;
+    margin:auto;
+    position:absolute;
+    top:0;bottom:0;left:0; right:0;
+    animation: loader 1.5s linear ;
+    z-index: 10;
+   
 }
     .logo img {
 		
@@ -477,7 +483,7 @@ footer ul{
             width: 16%;
             position: absolute;
             right: 1%;
-            height: 20%;
+            height: 22%;
             border-radius: 0PX 18px 18px 0px;
             color: white;
             margin-top: -69px;
