@@ -783,10 +783,23 @@ footer ul {
   cursor: pointer;
 }
 
-.entree1:hover > .menu__prix {
+.entree1:hover > .menu__prix__check {
   padding-right: 50px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-animation: slide-left 0.8s forwards;
+          animation: slide-left 0.8s forwards;
+}
+
+.entree1:hover > .menu__prix__check .check {
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  opacity: 1;
+}
+
+.entree1:hover > .menu__prix__check .far.fa-check-circle {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+          animation: rotate-center 0.6s ease-in-out both;
 }
 
 .menu__animation {
@@ -811,7 +824,7 @@ footer ul {
   font-family: Roboto, sans-serif;
 }
 
-.description:hover, .description :active {
+.description:hover {
   width: 75%;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -836,12 +849,12 @@ footer ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.menu__prix__check:hover > .menu__prix {
-  padding-right: 50px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  /* &:hover > .menu__prix{
+            padding-right: 50px;
+            transition: 0.5s ease;   
+         }
+    
+        */
 }
 
 .menu__prix {
@@ -849,13 +862,11 @@ footer ul {
   right: 50px;
   margin-top: -67px;
   font-weight: 700;
-}
-
-.menu__prix:hover {
-  padding-right: 50px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  cursor: pointer;
+  /* &:hover{
+            padding-right: 50px;
+            transition: 0.5s ease;
+            cursor: pointer
+        }*/
 }
 
 .check {
@@ -880,21 +891,16 @@ footer ul {
   margin-top: -69px;
   opacity: 0;
   cursor: pointer;
-}
-
-.check:hover {
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  opacity: 1;
-  -webkit-animation: slide-left 0.8s ease;
-          animation: slide-left 0.8s ease;
-}
-
-.check:hover > .far.fa-check-circle {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-  -webkit-animation: rotate-center 0.6s ease-in-out both;
-          animation: rotate-center 0.6s ease-in-out both;
+  /* &:hover{
+              transform-origin: right;
+               opacity: 1;
+              animation: slide-left 0.8s ease;
+               
+            }*/
+  /* &:hover > .far.fa-check-circle {
+                transform: rotate(360deg);
+                animation: rotate-center 0.6s ease-in-out both;  
+            }*/
 }
 
 .far.fa-check-circle {
@@ -1531,7 +1537,7 @@ footer ul {
     color: white;
     font-size: 1rem;
     margin-left: -42px;
-    margin-left: 105px;
+    margin-left: -3px;
   }
   .commande:hover {
     background-color: #fff;
