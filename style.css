@@ -774,9 +774,9 @@ footer ul {
 }
 
 .entree1:hover > .menu__prix__check {
-  padding-right: 50px EASE-in-out;
-  -webkit-animation: slide-left 0.6s   ease-in-out;
-          animation: slide-left 0.6s   ease-in-out;
+  padding-right: 50px;
+  -webkit-animation: slide-left 0.3s   ease;
+          animation: slide-left 0.3s   ease;
 }
 
 .entree1:hover > .menu__prix__check .check {
@@ -784,21 +784,17 @@ footer ul {
           transform-origin: right;
   font-size: 27px;
   background-color: #99E2D0;
+  z-index: 2;
 }
 
 .entree1:hover > .menu__prix__check .check .far.fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-animation: rotate-center 0.6s ease-in-out;
-          animation: rotate-center 0.6s ease-in-out;
+  -webkit-animation: rotate-center 0.6s ease;
+          animation: rotate-center 0.6s ease;
   opacity: 1;
 }
 
-/*.entree1:hover > .check{
-        transform-origin: right;
-        font-size: 14px;
-        z-index: 999;
-        opacity: 1;*/
 .menu__animation {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -853,6 +849,10 @@ footer ul {
   right: 35px;
   margin-top: -67px;
   font-weight: 700;
+}
+
+.menu__prix:hover {
+  padding-right: 50px;
 }
 
 .check {
@@ -967,7 +967,7 @@ footer ul {
   }
   .fonction__chiffre {
     width: 4%;
-    left: 81px;
+    left: 72px;
     margin-left: 0;
   }
   .restaurant__article {
@@ -990,114 +990,122 @@ footer ul {
     display: flex;
     width: 100%;
   }
+  .corps {
+    background-color: #f6f6f6;
+    border-radius: 40PX 40px 0px 0px;
+    position: relative;
+    margin-top: -102px;
+    margin-right: 17px;
+    margin-left: 17px;
+    font-family: "Shrikhand", cursive;
+  }
+  .commande {
+    border-radius: 30px;
+    padding: 20px;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 61px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+    background: linear-gradient(#FF79DA, #9356DC);
+    font-family: Roboto, sans-serif;
+    margin-bottom: 10px;
+    cursor: pointer;
+    height: 64px;
+    color: white;
+    font-size: 1rem;
+    margin-left: 7px;
+    width: 23%;
+  }
 }
 
-/*@media screen and (max-width:768px){
-    .logo img{
-        width: 180px;
-        padding: 20px 0 15px 0;
-}
-.localisation {
-	display: flex;
-	justify-content: center;
-	background-color:#f0ecec; 
-	padding: 10px 0;
-	border-top: 3px solid #d6d4d4;
-    & i{
-        margin-right: -15px;
-        z-index: 1;
-    }
-}
-    input{
-        background-color:#f0ecec; 
-        border: none;
-        font-size: 1.1em;
-        font-weight: 200;
-        font-family: $fonts1;
-        text-align: center;
-        color: #000;
-    }
-    .reservation {
-        background-color:#faf8f8; ;
-        @include flexbox();
-        height: 200px;
-    
-       .reservation__text {
-            font-family: $fonts1;
-             margin-left: 7px;
-            font-size: 1.4rem;
-            text-align: center;
-        }
-    }
-    .reservation__paragraphe {
-        font-family: $fonts1;
-        margin-left: 0;
-        font-size: 1.2rem;
-        text-align: center
-    }
-    
-    .reservation__explorer {
-        @include button1();
-        
-        top: 310px;
-        margin-bottom: 20px;
-        &:hover{
-            background-color: #fff;
-            box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
-        } 
-    }
-    .fonction {
-        display: flex;
-        flex-direction: column;
-        margin: 30px 0;
-        & h2{
-            display: flex;
+@media screen and (min-width: 1024px) {
+  .carte__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .entree1 {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 105%;
+  }
+  .corps {
+    margin-right: 17px;
+    margin-left: 12px;
+  }
+  .menu__prix {
+    position: absolute;
+    right: 4px;
+  }
+  .commande {
+    margin-left: 69px;
+  }
+  .logo img {
+    width: 221px;
+    padding: 20px 0 15px 0;
+    margin-left: 27rem;
+  }
+  .fonction {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 30px 0;
+  }
+  .fonction h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
             flex-direction: column;
-            text-align: left;
-        }
-    }
-    
-    .fonction__contenu{
-        @include flexbox();
-            
-            border-radius: 31px;
-            
-            margin: 24px;
-            padding: 6px;
-            width: 20%;
-        
-        background-color: #ececec;
-    }
-    .fonction__chiffre{
-        display: flex;
-        border-radius: 100%;
-        height: 1.5em;
-        width: 1.5em;
-        border: 1px solid #f2f2f2;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        background-color: #9356DC;
-        position: absolute;
-        left: -15px;
-    
-    
-    }
-    .fonction__emoticone {
-        color: grey;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
+    text-align: left;
+  }
+  .fonction__contenu {
+    width: 27%;
+  }
+  .fonction__chiffre {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 50%;
+    width: 1.5em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+    background-color: #9356DC;
+    position: absolute;
+  }
+  .fonction__emoticone {
+    color: grey;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
         -ms-flex-pack: start;
-        justify-content: flex-start;
-        margin-right: 29px;
-    }
-    .restaurant__article{
-    width:45% ;
-    }
+            justify-content: flex-start;
+    margin-right: 29px;
+  }
+  .restaurant__article {
+    width: 30%;
+  }
 }
-*/
+
 /*****************MOBILE************************/
 @media only screen and (max-width: 420px) {
   html, body {
@@ -1256,12 +1264,12 @@ footer ul {
             justify-content: center;
   }
   .restaurant__article {
+    width: 80%;
     border-radius: 20px;
     border: 1px solid #f2f2f2;
     -webkit-box-shadow: 0px 7px 10px -6px #b9b8b8;
             box-shadow: 0px 7px 10px -6px #b9b8b8;
     max-width: 650px;
-    margin: 20px 15px;
     text-decoration: none;
     color: #1da551;
     position: relative;
@@ -1340,6 +1348,7 @@ footer ul {
     font-size: 1.1rem;
   }
   .restaurant__titre {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
