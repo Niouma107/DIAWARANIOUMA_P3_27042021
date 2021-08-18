@@ -753,46 +753,84 @@ footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   border-radius: 25PX 25PX 18px 18px;
   background-color: white;
   margin-bottom: 10px;
-  padding: 7px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-left: 0.5rem;
-  margin-right: 0.5rem;
   cursor: pointer;
   font-family: Roboto, sans-serif;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .entree1:hover {
   cursor: pointer;
 }
 
-.entree1:hover > .menu__prix__check {
-  padding-right: 50px;
-  -webkit-animation: slide-left 0.3s   ease;
-          animation: slide-left 0.3s   ease;
+.entree1:hover > .entree__check {
+  -webkit-animation: slide-left 0.3s  forwards;
+          animation: slide-left 0.3s  forwards;
 }
 
-.entree1:hover > .menu__prix__check .check {
-  -webkit-transform-origin: right;
-          transform-origin: right;
+.entree1:hover > .entree__check .entree__icone {
+  -webkit-transform-origin: center;
+          transform-origin: center;
   font-size: 27px;
   background-color: #99E2D0;
-  z-index: 2;
 }
 
-.entree1:hover > .menu__prix__check .check .far.fa-check-circle {
+.entree1:hover > .entree__check .entree__icone .far.fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   -webkit-animation: rotate-center 0.6s ease;
           animation: rotate-center 0.6s ease;
-  opacity: 1;
+  font-size: 27px;
+}
+
+.entree__check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.entree__titre {
+  padding: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.entree__titre :hover {
+  width: 70%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.entree__prix {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.entree__icone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  border-radius: 0 15px 15px 0;
+  color: white;
 }
 
 .menu__animation {
@@ -808,98 +846,14 @@ footer ul {
   width: 30%;
 }
 
-.description {
-  margin-top: -10px;
-  padding: 0px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  font-family: Roboto, sans-serif;
-}
-
-.description:hover {
-  width: 75%;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.plat {
-  margin-top: 4px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  font-family: Roboto, sans-serif;
-}
-
-.menu__prix__check {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.menu__prix {
-  position: absolute;
-  right: 35px;
-  margin-top: -67px;
-  font-weight: 700;
-}
-
-.menu__prix:hover {
-  padding-right: 50px;
-}
-
-.check {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: transparent;
-  width: 16%;
-  position: absolute;
-  right: 1%;
-  height: 22%;
-  border-radius: 0PX 18px 18px 0px;
-  color: white;
-  margin-top: -69px;
-  font-size: 0px;
+.far.fa-check-circle {
+  margin: 10px;
+  font-size: 0;
   cursor: pointer;
-  /* &:hover{
-             
-               font-size: 14px;  
-               transform-origin: right;
-               font-size: 14px;
-               background-color: $tertiary-color;
-                 
-            }*/
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
-/*animation: slide-left 0.8s ease;
-               
-          
-           /* &:hover > .far.fa-check-circle {
-                transform: rotate(360deg);
-                animation: rotate-center 0.6s ease-in-out both;  
-            }*/
-/*.far.fa-check-circle{
-        cursor: pointer;
-        font-size: 14px;
-        transform-origin: center;
-        opacity: 0
-    }*/
 .commande {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1018,99 +972,82 @@ footer ul {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .carte__menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
+/*@media screen and (min-width:1000px){
+    .carte__menu {
+        
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+    .entree1{
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 105%;
+    }
+    .corps{
+        margin-right: 17px;
+        margin-left: 12px;
+    }
+    .menu__prix{
+        position: absolute;
+        right: 4px;
+    }
+    .commande{
+        margin-left: 69px;
+    }
+
+    .logo img{
+        width: 221px;
+        padding: 20px 0 15px 0;
+        margin-left: 27rem;
+
+}
+.fonction {
     display: flex;
-    position: relative;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .entree1 {
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 105%;
-  }
-  .corps {
-    margin-right: 17px;
-    margin-left: 12px;
-  }
-  .menu__prix {
-    position: absolute;
-    right: 4px;
-  }
-  .commande {
-    margin-left: 69px;
-  }
-  .logo img {
-    width: 221px;
-    padding: 20px 0 15px 0;
-    margin-left: 27rem;
-  }
-  .fonction {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    
     margin: 30px 0;
-  }
-  .fonction h2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: left;
-  }
-  .fonction__contenu {
+    & h2{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+}
+.fonction__contenu{
     width: 27%;
-  }
-  .fonction__chiffre {
-    display: -webkit-box;
-    display: -ms-flexbox;
+}
+
+.fonction__chiffre{
     display: flex;
     border-radius: 50%;
     width: 1.5em;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+     justify-content: center;
+    align-items: center;
     color: #fff;
     background-color: #9356DC;
     position: absolute;
-  }
-  .fonction__emoticone {
-    color: grey;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin-right: 29px;
-  }
-  .restaurant__article {
-    width: 30%;
-  }
-}
+    
 
+}
+.fonction__emoticone {
+    color: grey;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-right: 29px;
+}
+ .restaurant__article{
+    width:30% ;
+    }
+}*/
 /*****************MOBILE************************/
 @media only screen and (max-width: 420px) {
   html, body {
     margin: 0%;
     font-family: Roboto, sans-serif;
+    padding: 0%;
+    width: 100%;
   }
   /*PARTIE logo oh my food*/
   .logo {
@@ -1236,10 +1173,10 @@ footer ul {
     padding: 5px;
     margin: -2px;
     position: absolute;
-    left: 4%;
+    left: 7%;
     color: white;
     font-size: 0.9rem;
-    width: 19px;
+    width: 21px;
   }
   .fonction__emoticone {
     position: absolute;
@@ -1264,12 +1201,11 @@ footer ul {
             justify-content: center;
   }
   .restaurant__article {
-    width: 80%;
+    width: 94%;
     border-radius: 20px;
     border: 1px solid #f2f2f2;
     -webkit-box-shadow: 0px 7px 10px -6px #b9b8b8;
             box-shadow: 0px 7px 10px -6px #b9b8b8;
-    max-width: 650px;
     text-decoration: none;
     color: #1da551;
     position: relative;
@@ -1551,14 +1487,9 @@ footer ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     border-radius: 25PX 25PX 18px 18px;
     background-color: white;
     margin-bottom: 10px;
-    padding: 7px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-left: 2px;
@@ -1581,49 +1512,6 @@ footer ul {
             animation: menu 2s forwards;
     -webkit-transform-origin: top;
             transform-origin: top;
-  }
-  .description {
-    margin-top: -10px;
-    padding: 0px;
-  }
-  .plat {
-    margin-top: 4px;
-  }
-  .menu__prix {
-    position: absolute;
-    right: 28px;
-    margin-top: -39px;
-    font-weight: 700;
-  }
-  .check {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #99E2D0;
-    width: 10%;
-    position: absolute;
-    left: 89%;
-    height: 67PX;
-    border-radius: 0PX 10px 10px 0px;
-    opacity: 0;
-    /* &:active{
-            transform-origin: right;
-                opacity: 1;
-            animation: slide-left 0.8s ease;
-                
-            }*/
-    /* &:active > .far.fa-check-circle {
-                transform: rotate(360deg);
-                animation: rotate-center 0.6s ease-in-out both;  
-            }*/
   }
   .commande {
     display: -webkit-box;

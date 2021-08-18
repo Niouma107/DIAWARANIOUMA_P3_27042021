@@ -4,8 +4,9 @@
 @import "./sass/animation/keyframes";
     
 /*DESKTOP*/
-  
-      
+
+
+    
  
 html,body{
     margin: 0%;
@@ -412,31 +413,33 @@ footer ul{
     
     .entree1 {
         display: flex;
-        flex-direction: column;
         border-radius: 25PX 25PX 18px 18px;
         background-color: white;
         margin-bottom: 10px;
-        padding: 7px;
         flex-wrap: wrap;
         margin-left: 0.5rem;
-        margin-right: 0.5rem;
         cursor: pointer;  
         font-family: $fonts1;
+        justify-content: space-between;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
        
         &:hover{
+            
             cursor: pointer;
-            & > .menu__prix__check{
-                padding-right: 50px ;
-                animation: slide-left 0.3s   ease;
-                .check{
-                    transform-origin: right;
+            & > .entree__check{
+                animation: slide-left 0.3s  forwards;
+                
+                .entree__icone{
+                    transform-origin: center;
                     font-size: 27px;
                     background-color: $tertiary-color;
-                    z-index: 2;
+                    
                     .far.fa-check-circle {
                         transform: rotate(360deg);
                         animation: rotate-center 0.6s ease;  
-                        opacity: 1;
+                        font-size: 27px;
                     } 
                }    
             
@@ -445,8 +448,35 @@ footer ul{
             }
         }  
     } 
-   
-          
+ .entree__check{
+     display: flex;
+
+ }
+    .entree__titre{
+        padding: 5px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        & :hover{
+            width: 70%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+.entree__prix{
+    align-self: flex-end;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    font-weight: 700;
+}
+    .entree__icone {
+        display: flex;
+        align-items: center;
+        background:transparent;
+        border-radius: 0 15px 15px 0;
+        color: white;
+    }     
         
     .menu__animation{
         flex-direction: column;
@@ -455,86 +485,14 @@ footer ul{
         width: 30%;
 
     }
-    
-    .description {
-        margin-top: -10px;
-        padding: 0px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        font-family: $fonts1;
-        &:hover{
-            width: 75%;
-            text-overflow: ellipsis;
-            overflow: hidden;
-             white-space: nowrap;
-        }
-    }
-    .plat {
-        margin-top: 4px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        font-family: $fonts1;
-    }
-    .menu__prix__check {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      
-    }
-
-    .menu__prix {
-        position: absolute;
-        right: 35px;
-        margin-top: -67px;
-        font-weight: 700;
-       &:hover{
-        padding-right: 50px ;  
-       }
-       
-    }
-    
-    .check{
-       @include flexbox();
-        
-            background-color:transparent;
-            width: 16%;
-            position: absolute;
-            right: 1%;
-            height: 22%;
-            border-radius: 0PX 18px 18px 0px;
-            color:white;
-            margin-top: -69px;
-            font-size: 0px;
-            cursor: pointer;
-          
-           
-          
-           /* &:hover{
-             
-               font-size: 14px;  
-               transform-origin: right;
-               font-size: 14px;
-               background-color: $tertiary-color;
-                 
-            }*/
-    } 
-           /*animation: slide-left 0.8s ease;
-               
-          
-           /* &:hover > .far.fa-check-circle {
-                transform: rotate(360deg);
-                animation: rotate-center 0.6s ease-in-out both;  
-            }*/
-   
-    /*.far.fa-check-circle{
+    .far.fa-check-circle {
+        margin: 10px;
+        font-size: 0;
         cursor: pointer;
-        font-size: 14px;
         transform-origin: center;
-        opacity: 0
-    }*/
-    .commande {
+    }
+    
+     .commande {
       @include button() ;
         width: 23%; 
       &:hover{ background-color: #fff;
@@ -613,7 +571,7 @@ footer ul{
 }
 
 
-@media screen and (min-width:1024px){
+/*@media screen and (min-width:1000px){
     .carte__menu {
         
         display: flex;
@@ -681,7 +639,7 @@ footer ul{
  .restaurant__article{
     width:30% ;
     }
-}
+}*/
 
 
 /*****************MOBILE************************/
@@ -691,7 +649,9 @@ footer ul{
     
     html,body{
         margin: 0%;
-        font-family: $fonts1;	
+        font-family: $fonts1;
+        padding: 0%;
+        width:100%
     }
         
   /*PARTIE logo oh my food*/
@@ -779,10 +739,10 @@ footer ul{
         padding: 5px;
         margin: -2px;
         position: absolute;
-        left: 4%;
+        left: 7%;
         color: white;
         font-size: 0.9rem;
-        width: 19px;
+        width: 21px;
 }
     
 
@@ -804,11 +764,10 @@ footer ul{
     
 
     &__article {
-       width:80%;
+       width: 94%;
         border-radius: 20px;
         border: 1px solid #f2f2f2;
         box-shadow: 0px 7px 10px -6px #b9b8b8;
-        max-width: 650px;
         text-decoration: none;
         color: #1da551;
         position: relative;
@@ -1007,11 +966,9 @@ footer {
     
 .entree1 {
     display: flex;
-    flex-direction: column;
     border-radius: 25PX 25PX 18px 18px;
     background-color: white;
     margin-bottom: 10px;
-    padding: 7px;
     flex-wrap: wrap;
     margin-left: 2px;
     margin-right: 14px;
@@ -1027,39 +984,10 @@ footer {
     transform-origin: top;
     
 }
-.description {
-    margin-top: -10px;
-    padding: 0px;
-}
-.plat {
-    margin-top: 4px;
-}
-.menu__prix {
-    position: absolute;
-    right: 28px;
-    margin-top: -39px;
-    font-weight: 700;
-}
-.check{
-    @include flexbox();
-    background-color: $tertiary-color;
-    width: 10%;
-    position: absolute;
-    left: 89%;
-    height: 67PX;
-    border-radius: 0PX 10px 10px 0px;
-    opacity: 0;
-        /* &:active{
-            transform-origin: right;
-                opacity: 1;
-            animation: slide-left 0.8s ease;
-                
-            }*/
-            /* &:active > .far.fa-check-circle {
-                transform: rotate(360deg);
-                animation: rotate-center 0.6s ease-in-out both;  
-            }*/
-}
+
+
+        
+
 
 
     
