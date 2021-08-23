@@ -5,9 +5,6 @@
     
 /*DESKTOP*/
 
-
-    
- 
 html,body{
     margin: 0%;
     font-family: $fonts1;	
@@ -407,7 +404,7 @@ footer ul{
         position: relative;
         flex-direction: row;
         width: 100%;
-        justify-content: center;
+        justify-content: space-evenly;
             
     }
     
@@ -440,6 +437,15 @@ footer ul{
                         transform: rotate(360deg);
                         animation: rotate-center 0.6s ease;  
                         font-size: 27px;
+                    
+                         .entree__titre p{
+                            width: 75%;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                         }
+                    
+                    
                     } 
                }    
             
@@ -452,17 +458,19 @@ footer ul{
      display: flex;
 
  }
-    .entree__titre{
+
+    .entree__titre p{
         padding: 5px;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        & :hover{
-            width: 70%;
+        width: 96%;
+        /*& :hover{
+            width: 75%;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
-        }
+        }*/
     }
 .entree__prix{
     align-self: flex-end;
@@ -482,7 +490,7 @@ footer ul{
         flex-direction: column;
         display: flex;
         flex-wrap: wrap;
-        width: 30%;
+        
 
     }
     .far.fa-check-circle {
@@ -513,7 +521,7 @@ footer ul{
         transform-origin: top;
     }
   
- 
+
 /**********tablette**************/
 @media only screen and  (max-width:768px)  {
     
@@ -558,6 +566,9 @@ footer ul{
         margin-left: 17px;
         font-family: $fonts2;
     }
+    .entree__titre p{
+        width: 100%;
+    }
     .commande {
        @include button1();
        margin-bottom: 10px;
@@ -570,8 +581,8 @@ footer ul{
     }
 }
 
-
-/*@media screen and (min-width:1000px){
+/*
+@media screen and (orientation: landscape){
     .carte__menu {
         
         display: flex;
@@ -582,13 +593,13 @@ footer ul{
     .entree1{
         margin-left: 0px;
         margin-right: 0px;
-        width: 105%;
+        width: 100%;
     }
     .corps{
         margin-right: 17px;
         margin-left: 12px;
     }
-    .menu__prix{
+    .entree__prix{
         position: absolute;
         right: 4px;
     }
@@ -601,7 +612,7 @@ footer ul{
         padding: 20px 0 15px 0;
         margin-left: 27rem;
 
-}
+
 .fonction {
     display: flex;
     
@@ -639,9 +650,9 @@ footer ul{
  .restaurant__article{
     width:30% ;
     }
+}
+
 }*/
-
-
 /*****************MOBILE************************/
 
 
@@ -761,7 +772,7 @@ footer ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    width:100%;
 
     &__article {
        width: 94%;
@@ -778,6 +789,7 @@ footer ul{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+    width: 100%;
 }
 .restaurant__liens {
     text-decoration: none;
@@ -855,7 +867,7 @@ color: transparent;
     font-family:$fonts2 ;
     font-size: 1.5rem;
     color: white;
-    margin-left: 10px;
+    
     
 }
 footer {
@@ -888,12 +900,13 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 .Contact {
     text-decoration: none;
     color: white;
     margin-left:-1px;
+    
 }
 
     /*PARTIE MAQUETTE DES MENU */
@@ -959,22 +972,32 @@ footer {
     font-family:$fonts1 ;
     margin-left: 5px;
 }
-.carte__menu {
-        margin-left: 7px;
-        margin-right: 7px;
-}
-    
+  
 .entree1 {
     display: flex;
     border-radius: 25PX 25PX 18px 18px;
     background-color: white;
     margin-bottom: 10px;
     flex-wrap: wrap;
-    margin-left: 2px;
-    margin-right: 14px;
+     margin-right: 8px;
     cursor: pointer;   
     overflow: hidden;
      text-overflow: ellipsis;
+     white-space: nowrap;
+}
+.entree__titre p{
+    padding: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+     width: 80%;
+    & :hover{
+       
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
 }
 .menu__animation {
     display: flex;
@@ -985,7 +1008,9 @@ footer {
     
 }
 
-
+.entree__titre {
+    width: 75%;
+}
         
 
 

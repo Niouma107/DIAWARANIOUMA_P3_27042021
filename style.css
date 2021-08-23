@@ -744,9 +744,9 @@ footer ul {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .entree1 {
@@ -793,24 +793,31 @@ footer ul {
   font-size: 27px;
 }
 
+.entree1:hover > .entree__check .entree__icone .far.fa-check-circle .entree__titre p {
+  width: 75%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .entree__check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.entree__titre {
+.entree__titre p {
   padding: 5px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-}
-
-.entree__titre :hover {
-  width: 70%;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  width: 96%;
+  /*& :hover{
+            width: 75%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }*/
 }
 
 .entree__prix {
@@ -843,7 +850,6 @@ footer ul {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 30%;
 }
 
 .far.fa-check-circle {
@@ -953,6 +959,9 @@ footer ul {
     margin-left: 17px;
     font-family: "Shrikhand", cursive;
   }
+  .entree__titre p {
+    width: 100%;
+  }
   .commande {
     border-radius: 30px;
     padding: 20px;
@@ -972,7 +981,8 @@ footer ul {
   }
 }
 
-/*@media screen and (min-width:1000px){
+/*
+@media screen and (orientation: landscape){
     .carte__menu {
         
         display: flex;
@@ -983,13 +993,13 @@ footer ul {
     .entree1{
         margin-left: 0px;
         margin-right: 0px;
-        width: 105%;
+        width: 100%;
     }
     .corps{
         margin-right: 17px;
         margin-left: 12px;
     }
-    .menu__prix{
+    .entree__prix{
         position: absolute;
         right: 4px;
     }
@@ -1002,7 +1012,7 @@ footer ul {
         padding: 20px 0 15px 0;
         margin-left: 27rem;
 
-}
+
 .fonction {
     display: flex;
     
@@ -1040,6 +1050,8 @@ footer ul {
  .restaurant__article{
     width:30% ;
     }
+}
+
 }*/
 /*****************MOBILE************************/
 @media only screen and (max-width: 420px) {
@@ -1199,6 +1211,7 @@ footer ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 100%;
   }
   .restaurant__article {
     width: 94%;
@@ -1219,6 +1232,7 @@ footer ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 100%;
   }
   .restaurant__liens {
     text-decoration: none;
@@ -1325,7 +1339,6 @@ footer ul {
     font-family: "Shrikhand", cursive;
     font-size: 1.5rem;
     color: white;
-    margin-left: 10px;
   }
   footer {
     background-color: #000000bf;
@@ -1379,7 +1392,7 @@ footer ul {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
   }
   .Contact {
     text-decoration: none;
@@ -1479,10 +1492,6 @@ footer ul {
     font-family: Roboto, sans-serif;
     margin-left: 5px;
   }
-  .carte__menu {
-    margin-left: 7px;
-    margin-right: 7px;
-  }
   .entree1 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1492,11 +1501,23 @@ footer ul {
     margin-bottom: 10px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: 2px;
-    margin-right: 14px;
+    margin-right: 8px;
     cursor: pointer;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .entree__titre p {
+    padding: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 80%;
+  }
+  .entree__titre p :hover {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
   .menu__animation {
     display: -webkit-box;
@@ -1512,6 +1533,9 @@ footer ul {
             animation: menu 2s forwards;
     -webkit-transform-origin: top;
             transform-origin: top;
+  }
+  .entree__titre {
+    width: 75%;
   }
   .commande {
     display: -webkit-box;
