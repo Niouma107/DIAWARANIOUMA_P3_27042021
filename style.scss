@@ -4,9 +4,13 @@
 @import "./sass/animation/keyframes";
     
 /*DESKTOP*/
-
+*{box-sizing:border-box;
+    font-family: $fonts1;
+    margin:0px;
+    padding:0px;
+}
 html,body{
-    margin: 0%;
+    margin: 0px;
     font-family: $fonts1;	
 }
 .chargement{
@@ -43,19 +47,14 @@ html,body{
 		box-shadow: 4px 0px 10px gray;
         text-align: center;
 	}
-*{box-sizing:border-box;
-    font-family: $fonts1;
-}
+
 
 .localisation i{
     padding: 17px;
-    margin-left: 11%;
-    
+        
 }
-.localisation input {
+.localisation__ville {
 	background-color: #DBD9D9;
-	border: none;
-	font-size: 1.2em;
 	font-weight: 900;
     font-family: $fonts1;
 }
@@ -66,13 +65,13 @@ html,body{
 	display: flex;
     flex-direction: column;
     text-align: center;
-    height: 202px;
+    height: 176px;
     justify-content: center;
     align-items: center;
 }
 .reservation__text {
 	font-family: $fonts1;
-    margin-top: -43px;
+    margin-top: -72px;
     text-align: center;
     font-size: 1.5rem;
 }
@@ -83,7 +82,7 @@ html,body{
 }
 .reservation__explorer {
     position: absolute;
-    top: 254px;
+    top: 225px;
 	border-radius: 30px;
 	padding: 20px;
 	color: white;
@@ -107,25 +106,21 @@ html,body{
 }
 
 .fonction h2,.restaurant h2{
-	display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-	
-    width: 100%;
-    margin-left: 2%
+	 width: 100%;
+    margin-left: 3px;
 }
 .fonction__contenu {
 	@include flexbox();
 	border-radius: 31px;
 	background-color: #F2F2F2;
 	margin: 24px;
-	padding: 6px;
-	width: 20%;
+	padding: 20px;
+	width: 24%;
 }
 .fonction__contenu:hover {
 	transform: scale(1.1);
 	cursor: pointer;
-	background-color: #D7D4D4;
+	background-color:#f8eef8; 
 }
 
 
@@ -139,7 +134,7 @@ html,body{
 	color: white;
 	font-size: 0.9rem;
 	width: 22px;
-	margin-left: -262PX;
+	margin-left: -302PX;
 }
 .fonction__emoticone {
 	color: grey;
@@ -156,6 +151,7 @@ html,body{
 	display: flex;
 	flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 10px;
 }
 
 .restaurant {
@@ -179,9 +175,7 @@ html,body{
 	flex-wrap: wrap;
 
 }
-.restaurant__article:hover {
-	transform: scale(1.1) ;
-}
+
 
 .restaurant__liens {
 	text-decoration: none;
@@ -190,12 +184,12 @@ html,body{
 }
 .restaurant__article img {
 
-		border-radius: 15px 15px 0px 0px;
-		object-fit: cover;
-		border: 0px solid transparent;
-		width: 95%;
-		@include flexbox();
-		box-shadow: none;
+    border-radius: 15px 15px 0px 0px;
+    object-fit: cover;
+    border: 0px solid transparent;
+    width: 95%;
+    @include flexbox();
+    box-shadow: none;
 }
 
 .article__img {
@@ -216,7 +210,7 @@ html,body{
 }
 .restaurant__titre {
 	color:black;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -227,6 +221,9 @@ html,body{
 	padding-bottom: 12px;
     position: relative;
     font-family: $fonts1;
+    & h3 {
+        margin-top: 16px;
+    }
 }
 
 .restaurant__coeur {
@@ -240,10 +237,8 @@ html,body{
     opacity: 1;
     
 }
-.restaurant__coeur:hover{
-    transform: scale(1.2); 
-    
-}
+
+
 /*Coeur2*/
 
 .restaurant__coeur1 {
@@ -258,9 +253,9 @@ html,body{
     animation coeur 1s ease-in-out;
  &:hover{
   
-    transform: scale(1.2); 
+    transform: scale(1.1); 
     
-    animation: coeur 1s ease-in-out; 
+    animation: coeur 1s ease; 
  }
  
      
@@ -273,10 +268,11 @@ html,body{
 	font-family:$fonts2 ;
 	font-size: 1.5rem; 
 	color: white;
-	margin-left: 33px;
-    
+	   
 }
-
+.logofooter{
+    margin-top: 10px;
+}
     footer {
         background-color: #000000bf;
         color: white;
@@ -363,7 +359,6 @@ footer ul{
         position: relative;
         font-size: 2rem;
         &:hover{
-            transform: scale(1.2); 
             opacity: 1;
         }
 
@@ -375,8 +370,8 @@ footer ul{
         animation coeur 1s ease-in-out;
         cursor: pointer;
         &:hover{
-        transform: scale(1.2); 
-        animation: coeur 1s ease-in-out; 
+        transform: scale(1.1); 
+        animation: coeur 1s ease; 
         opacity: 1;
         }
          
@@ -398,6 +393,7 @@ footer ul{
         width: 46px;
         font-family:$fonts1 ;
         margin-left: 5px;
+        margin-bottom: 35px;
     }
     .carte__menu {
         display:flex;
@@ -410,19 +406,19 @@ footer ul{
     
     .entree1 {
         display: flex;
-        border-radius: 25PX 25PX 18px 18px;
+        border-radius: 20px;
         background-color: white;
-        margin-bottom: 10px;
+        border: 1px solid #f2f2f2;
+        margin-bottom: 24px;
         flex-wrap: wrap;
         margin-left: 0.5rem;
         cursor: pointer;  
         font-family: $fonts1;
         justify-content: space-between;
-        text-overflow: ellipsis;
         overflow: hidden;
-        white-space: nowrap;
-       
-        &:hover{
+        box-shadow: 0px 7px 10px -6px #b9b8b8;
+        padding:7px;
+        &:hover,:active{
             
             cursor: pointer;
             & > .entree__check{
@@ -432,7 +428,7 @@ footer ul{
                     transform-origin: center;
                     font-size: 27px;
                     background-color: $tertiary-color;
-                    
+                    margin-right: -10px;
                     .far.fa-check-circle {
                         transform: rotate(360deg);
                         animation: rotate-center 0.6s ease;  
@@ -458,23 +454,23 @@ footer ul{
      display: flex;
 
  }
+.entree__titre h4{
+    margin-top: 4px;
+    margin-left: 9px;
 
+}
     .entree__titre p{
         padding: 5px;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
         width: 96%;
-        /*& :hover{
-            width: 75%;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-        }*/
+        margin-left:2px;
+      
     }
 .entree__prix{
     align-self: flex-end;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     margin-right: 10px;
     font-weight: 700;
 }
@@ -482,8 +478,10 @@ footer ul{
         display: flex;
         align-items: center;
         background:transparent;
-        border-radius: 0 15px 15px 0;
+        border-radius: 0 20px 20px 0;
         color: white;
+        margin-top: -10px;
+        margin-bottom: -10px;
     }     
         
     .menu__animation{
@@ -494,7 +492,7 @@ footer ul{
 
     }
     .far.fa-check-circle {
-        margin: 10px;
+        margin: 14px;
         font-size: 0;
         cursor: pointer;
         transform-origin: center;
@@ -523,7 +521,7 @@ footer ul{
   
 
 /**********tablette**************/
-@media only screen and  (max-width:768px)  {
+@media only screen and  (max-width:768px)   {
     
     .logo{
         text-align: center;
@@ -659,10 +657,10 @@ footer ul{
 @media only screen and  (max-width:420px) {
     
     html,body{
-        margin: 0%;
+        margin: 0px;
         font-family: $fonts1;
-        padding: 0%;
-        width:100%
+        padding: 0px;
+       
     }
         
   /*PARTIE logo oh my food*/
@@ -683,15 +681,14 @@ footer ul{
 
     & i{
         padding: 17px;
-        margin-left: 11%;
+       
     }
 }                
             
-    input {
+    .localisation__ville {
         background-color: #DBD9D9;
-        border: none;
         font-size: 1.1em;
-        font-weight: 200;
+        font-weight: 400;
         font-family: $fonts1;
     }
  
@@ -738,8 +735,9 @@ footer ul{
     margin: 24px;
     padding: 6px;
     cursor: pointer;
-    &:active{
-        background-color:#d9a7d9
+    &:active,:hover{
+        background-color:#f8eef8;
+        
     }
 }                
   
@@ -757,25 +755,18 @@ footer ul{
 }
     
 
-.fonction__emoticone {
-    position: absolute;
-    left: 18%;
-    color: grey;
+.fonction__emoticone p {
+ font-size: 1.1rem;
 
-    & p{
-        font-size: 1.1rem;
-    }
 }
-    /*partie carte image resto*/
+        
+     /*partie carte image resto*/
 .restaurant {
     background-color:#f0efef;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width:100%;
+    
 
     &__article {
-       width: 94%;
+       width: 89%;
         border-radius: 20px;
         border: 1px solid #f2f2f2;
         box-shadow: 0px 7px 10px -6px #b9b8b8;
@@ -789,7 +780,7 @@ footer ul{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-    width: 100%;
+    
 }
 .restaurant__liens {
     text-decoration: none;
@@ -839,11 +830,15 @@ footer ul{
     border-radius: 0 0 15px 15px;
     flex-direction: column;
     font-family: $fonts1;
+    font-size: 1rem;
 }
-    
+.restaurant__titre h3 {
+    margin-top: 13px;
+    font-size: 1rem;
+}  
 .restaurant__coeur {
     position: absolute;
-    bottom: 39px;
+    bottom: 21px;
     right: 31px;
     width: 33px;
     height: 29PX;
@@ -852,7 +847,7 @@ footer ul{
 } 
 .restaurant__coeur1{
 position: absolute;
-bottom: 39px;
+bottom: 21px;
 right: 31px;
 width: 33px;
 height: 29PX;
@@ -865,9 +860,9 @@ color: transparent;
 .logofooter h2{
     
     font-family:$fonts2 ;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: white;
-    
+    margin-left: 9px;
     
 }
 footer {
@@ -887,26 +882,27 @@ footer {
         display: flex;
         flex-direction: column;
         font-family:$fonts1;
-        font-size: 1.5rem;
-    
+        font-size: 1.2rem;
+        margin-left: 9px;
     }
 }
 .logofoter__emoticone {
     display: flex;
     flex-direction: row;
-    margin-right: 16px;
+    margin-right: 13px;
 }
 .logofooter__text {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 10px;
+    font-size: 1.2rem;
 }
 .Contact {
     text-decoration: none;
     color: white;
     margin-left:-1px;
-    
+    font-size: 1.2rem;
 }
 
     /*PARTIE MAQUETTE DES MENU */
@@ -950,12 +946,10 @@ footer {
     justify-content: center;
     align-items: center;
 }
-.titre__coeur {
-        font-size: 1.5rem;
-}
+
 .titre__coeur2{
     color: transparent;
-    font-size: 2rem;
+    
 }
 .corps {
     background-color: #f6f6f6;
@@ -990,7 +984,7 @@ footer {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-     width: 80%;
+    
     & :hover{
        
         text-overflow: ellipsis;
@@ -1009,7 +1003,7 @@ footer {
 }
 
 .entree__titre {
-    width: 75%;
+    width: 58%;
 }
         
 

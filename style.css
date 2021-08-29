@@ -149,8 +149,16 @@
 }
 
 /*DESKTOP*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
 html, body {
-  margin: 0%;
+  margin: 0px;
   font-family: Roboto, sans-serif;
 }
 
@@ -197,21 +205,12 @@ html, body {
   text-align: center;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: Roboto, sans-serif;
-}
-
 .localisation i {
   padding: 17px;
-  margin-left: 11%;
 }
 
-.localisation input {
+.localisation__ville {
   background-color: #DBD9D9;
-  border: none;
-  font-size: 1.2em;
   font-weight: 900;
   font-family: Roboto, sans-serif;
 }
@@ -227,7 +226,7 @@ html, body {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  height: 202px;
+  height: 176px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -238,7 +237,7 @@ html, body {
 
 .reservation__text {
   font-family: Roboto, sans-serif;
-  margin-top: -43px;
+  margin-top: -72px;
   text-align: center;
   font-size: 1.5rem;
 }
@@ -251,7 +250,7 @@ html, body {
 
 .reservation__explorer {
   position: absolute;
-  top: 254px;
+  top: 225px;
   border-radius: 30px;
   padding: 20px;
   color: white;
@@ -291,17 +290,8 @@ html, body {
 }
 
 .fonction h2, .restaurant h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 100%;
-  margin-left: 2%;
+  margin-left: 3px;
 }
 
 .fonction__contenu {
@@ -319,15 +309,15 @@ html, body {
   border-radius: 31px;
   background-color: #F2F2F2;
   margin: 24px;
-  padding: 6px;
-  width: 20%;
+  padding: 20px;
+  width: 24%;
 }
 
 .fonction__contenu:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   cursor: pointer;
-  background-color: #D7D4D4;
+  background-color: #f8eef8;
 }
 
 .fonction__chiffre {
@@ -350,7 +340,7 @@ html, body {
   color: white;
   font-size: 0.9rem;
   width: 22px;
-  margin-left: -262PX;
+  margin-left: -302PX;
 }
 
 .fonction__emoticone {
@@ -376,6 +366,7 @@ html, body {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-top: 10px;
 }
 
 .restaurant {
@@ -407,11 +398,6 @@ html, body {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.restaurant__article:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .restaurant__liens {
@@ -481,7 +467,7 @@ html, body {
 
 .restaurant__titre {
   color: black;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -500,6 +486,10 @@ html, body {
   font-family: Roboto, sans-serif;
 }
 
+.restaurant__titre h3 {
+  margin-top: 16px;
+}
+
 .restaurant__coeur {
   position: absolute;
   bottom: 38px;
@@ -509,11 +499,6 @@ html, body {
   font-size: 2rem;
   color: black;
   opacity: 1;
-}
-
-.restaurant__coeur:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
 }
 
 /*Coeur2*/
@@ -532,10 +517,10 @@ html, body {
 }
 
 .restaurant__coeur1:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-animation: coeur 1s ease-in-out;
-          animation: coeur 1s ease-in-out;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-animation: coeur 1s ease;
+          animation: coeur 1s ease;
 }
 
 /*PARTIE FOOTER*/
@@ -543,7 +528,10 @@ html, body {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
   color: white;
-  margin-left: 33px;
+}
+
+.logofooter {
+  margin-top: 10px;
 }
 
 footer {
@@ -694,8 +682,6 @@ footer ul {
 }
 
 .titre__coeur:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
   opacity: 1;
 }
 
@@ -710,10 +696,10 @@ footer ul {
 }
 
 .titre__coeur2:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-animation: coeur 1s ease-in-out;
-          animation: coeur 1s ease-in-out;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-animation: coeur 1s ease;
+          animation: coeur 1s ease;
   opacity: 1;
 }
 
@@ -732,6 +718,7 @@ footer ul {
   width: 46px;
   font-family: Roboto, sans-serif;
   margin-left: 5px;
+  margin-bottom: 35px;
 }
 
 .carte__menu {
@@ -753,9 +740,10 @@ footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 25PX 25PX 18px 18px;
+  border-radius: 20px;
   background-color: white;
-  margin-bottom: 10px;
+  border: 1px solid #f2f2f2;
+  margin-bottom: 24px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-left: 0.5rem;
@@ -764,28 +752,30 @@ footer ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
+  -webkit-box-shadow: 0px 7px 10px -6px #b9b8b8;
+          box-shadow: 0px 7px 10px -6px #b9b8b8;
+  padding: 7px;
 }
 
-.entree1:hover {
+.entree1:hover, .entree1 :active {
   cursor: pointer;
 }
 
-.entree1:hover > .entree__check {
+.entree1:hover > .entree__check, .entree1 :active > .entree__check {
   -webkit-animation: slide-left 0.3s  forwards;
           animation: slide-left 0.3s  forwards;
 }
 
-.entree1:hover > .entree__check .entree__icone {
+.entree1:hover > .entree__check .entree__icone, .entree1 :active > .entree__check .entree__icone {
   -webkit-transform-origin: center;
           transform-origin: center;
   font-size: 27px;
   background-color: #99E2D0;
+  margin-right: -10px;
 }
 
-.entree1:hover > .entree__check .entree__icone .far.fa-check-circle {
+.entree1:hover > .entree__check .entree__icone .far.fa-check-circle, .entree1 :active > .entree__check .entree__icone .far.fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   -webkit-animation: rotate-center 0.6s ease;
@@ -793,7 +783,7 @@ footer ul {
   font-size: 27px;
 }
 
-.entree1:hover > .entree__check .entree__icone .far.fa-check-circle .entree__titre p {
+.entree1:hover > .entree__check .entree__icone .far.fa-check-circle .entree__titre p, .entree1 :active > .entree__check .entree__icone .far.fa-check-circle .entree__titre p {
   width: 75%;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -806,24 +796,24 @@ footer ul {
   display: flex;
 }
 
+.entree__titre h4 {
+  margin-top: 4px;
+  margin-left: 9px;
+}
+
 .entree__titre p {
   padding: 5px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   width: 96%;
-  /*& :hover{
-            width: 75%;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-        }*/
+  margin-left: 2px;
 }
 
 .entree__prix {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   margin-right: 10px;
   font-weight: 700;
 }
@@ -836,8 +826,10 @@ footer ul {
       -ms-flex-align: center;
           align-items: center;
   background: transparent;
-  border-radius: 0 15px 15px 0;
+  border-radius: 0 20px 20px 0;
   color: white;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
 .menu__animation {
@@ -853,7 +845,7 @@ footer ul {
 }
 
 .far.fa-check-circle {
-  margin: 10px;
+  margin: 14px;
   font-size: 0;
   cursor: pointer;
   -webkit-transform-origin: center;
@@ -1056,10 +1048,9 @@ footer ul {
 /*****************MOBILE************************/
 @media only screen and (max-width: 420px) {
   html, body {
-    margin: 0%;
+    margin: 0px;
     font-family: Roboto, sans-serif;
-    padding: 0%;
-    width: 100%;
+    padding: 0px;
   }
   /*PARTIE logo oh my food*/
   .logo {
@@ -1089,13 +1080,11 @@ footer ul {
   }
   .localisation i {
     padding: 17px;
-    margin-left: 11%;
   }
-  input {
+  .localisation__ville {
     background-color: #DBD9D9;
-    border: none;
     font-size: 1.1em;
-    font-weight: 200;
+    font-weight: 400;
     font-family: Roboto, sans-serif;
   }
   /*PARTIE RESERVATION*/
@@ -1165,8 +1154,8 @@ footer ul {
     padding: 6px;
     cursor: pointer;
   }
-  .fonction__contenu:active {
-    background-color: #d9a7d9;
+  .fonction__contenu:active, .fonction__contenu :hover {
+    background-color: #f8eef8;
   }
   .fonction__chiffre {
     display: -webkit-box;
@@ -1190,31 +1179,15 @@ footer ul {
     font-size: 0.9rem;
     width: 21px;
   }
-  .fonction__emoticone {
-    position: absolute;
-    left: 18%;
-    color: grey;
-  }
   .fonction__emoticone p {
     font-size: 1.1rem;
   }
   /*partie carte image resto*/
   .restaurant {
     background-color: #f0efef;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
   }
   .restaurant__article {
-    width: 94%;
+    width: 89%;
     border-radius: 20px;
     border: 1px solid #f2f2f2;
     -webkit-box-shadow: 0px 7px 10px -6px #b9b8b8;
@@ -1232,7 +1205,6 @@ footer ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 100%;
   }
   .restaurant__liens {
     text-decoration: none;
@@ -1316,10 +1288,15 @@ footer ul {
         -ms-flex-direction: column;
             flex-direction: column;
     font-family: Roboto, sans-serif;
+    font-size: 1rem;
+  }
+  .restaurant__titre h3 {
+    margin-top: 13px;
+    font-size: 1rem;
   }
   .restaurant__coeur {
     position: absolute;
-    bottom: 39px;
+    bottom: 21px;
     right: 31px;
     width: 33px;
     height: 29PX;
@@ -1327,7 +1304,7 @@ footer ul {
   }
   .restaurant__coeur1 {
     position: absolute;
-    bottom: 39px;
+    bottom: 21px;
     right: 31px;
     width: 33px;
     height: 29PX;
@@ -1337,8 +1314,9 @@ footer ul {
   /*PARTIE FOOTER*/
   .logofooter h2 {
     font-family: "Shrikhand", cursive;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: white;
+    margin-left: 9px;
   }
   footer {
     background-color: #000000bf;
@@ -1370,7 +1348,8 @@ footer ul {
         -ms-flex-direction: column;
             flex-direction: column;
     font-family: Roboto, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-left: 9px;
   }
   .logofoter__emoticone {
     display: -webkit-box;
@@ -1380,7 +1359,7 @@ footer ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin-right: 16px;
+    margin-right: 13px;
   }
   .logofooter__text {
     display: -webkit-box;
@@ -1393,11 +1372,13 @@ footer ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-bottom: 10px;
+    font-size: 1.2rem;
   }
   .Contact {
     text-decoration: none;
     color: white;
     margin-left: -1px;
+    font-size: 1.2rem;
   }
   /*PARTIE MAQUETTE DES MENU */
   .menunav {
@@ -1470,12 +1451,8 @@ footer ul {
         -ms-flex-align: center;
             align-items: center;
   }
-  .titre__coeur {
-    font-size: 1.5rem;
-  }
   .titre__coeur2 {
     color: transparent;
-    font-size: 2rem;
   }
   .corps {
     background-color: #f6f6f6;
@@ -1512,7 +1489,6 @@ footer ul {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 80%;
   }
   .entree__titre p :hover {
     text-overflow: ellipsis;
@@ -1535,7 +1511,7 @@ footer ul {
             transform-origin: top;
   }
   .entree__titre {
-    width: 75%;
+    width: 58%;
   }
   .commande {
     display: -webkit-box;
