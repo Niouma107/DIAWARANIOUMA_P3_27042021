@@ -9,6 +9,7 @@
     margin:0px;
     padding:0px;
 }
+
 html,body{
     margin: 0px;
     font-family: $fonts1;	
@@ -106,7 +107,7 @@ html,body{
 }
 
 .fonction h2,.restaurant h2{
-	 width: 100%;
+	
     margin-left: 3px;
 }
 .fonction__contenu {
@@ -118,7 +119,7 @@ html,body{
 	width: 24%;
 }
 .fonction__contenu:hover {
-	transform: scale(1.1);
+	
 	cursor: pointer;
 	background-color:#f8eef8; 
 }
@@ -140,8 +141,8 @@ html,body{
 	color: grey;
 		display: flex;
 		justify-content: flex-start;
-		margin-right: 29px;
-	
+		
+        margin-right: 29px;
 }
 .fonction__emoticone p{
 	font-size: 1.1rem;
@@ -518,10 +519,10 @@ footer ul{
         animation: menu 2s forwards ;
         transform-origin: top;
     }
-  
+
 
 /**********tablette**************/
-@media only screen and  (max-width:768px)   {
+@media only screen and  (min-width:768px)and (max-width:1024PX)   {
     
     .logo{
         text-align: center;
@@ -579,78 +580,9 @@ footer ul{
     }
 }
 
-/*
-@media screen and (orientation: landscape){
-    .carte__menu {
-        
-        display: flex;
-        position: relative;
-        flex-direction: row;
-        justify-content:space-around;
-    }
-    .entree1{
-        margin-left: 0px;
-        margin-right: 0px;
-        width: 100%;
-    }
-    .corps{
-        margin-right: 17px;
-        margin-left: 12px;
-    }
-    .entree__prix{
-        position: absolute;
-        right: 4px;
-    }
-    .commande{
-        margin-left: 69px;
-    }
-
-    .logo img{
-        width: 221px;
-        padding: 20px 0 15px 0;
-        margin-left: 27rem;
 
 
-.fonction {
-    display: flex;
-    
-    margin: 30px 0;
-    & h2{
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-    }
-}
-.fonction__contenu{
-    width: 27%;
-}
 
-.fonction__chiffre{
-    display: flex;
-    border-radius: 50%;
-    width: 1.5em;
-     justify-content: center;
-    align-items: center;
-    color: #fff;
-    background-color: #9356DC;
-    position: absolute;
-    
-
-}
-.fonction__emoticone {
-    color: grey;
-   
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-right: 29px;
-}
- .restaurant__article{
-    width:30% ;
-    }
-}
-
-}*/
 /*****************MOBILE************************/
 
 
@@ -669,7 +601,7 @@ footer ul{
     & img{
         width: 50%;
         padding: 5%;
-   
+        margin-left: 0px;
     }  
 }
     /*PARTIE LOCALISATION IMPUT*/
@@ -728,13 +660,20 @@ footer ul{
 .fonction h2, .restaurant h2{
  margin-left: 20px;
 }
+.fonction{
+    display: flex;
+    flex-direction: column;
+
+}
 .fonction__contenu {
-    @include flexbox();
+    display: flex;
+    
     border-radius: 31px;
     background-color: #F2F2F2;
     margin: 24px;
     padding: 6px;
     cursor: pointer;
+    width: 85%;
     &:active,:hover{
         background-color:#f8eef8;
         
@@ -761,6 +700,12 @@ footer ul{
 }
         
      /*partie carte image resto*/
+
+    .carte__menu{
+    display: flex; 
+    flex-direction: column;
+    }
+
 .restaurant {
     background-color:#f0efef;
     
