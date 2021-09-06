@@ -388,7 +388,7 @@ html, body {
   display: flex;
   margin-bottom: 30px;
   cursor: pointer;
-  width: 26%;
+  width: 34%;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -903,7 +903,7 @@ footer ul {
 }
 
 /**********tablette**************/
-@media only screen and (min-width: 768px) and (max-width: 1024PX) {
+@media only screen and (min-width: 573px) and (max-width: 972PX) {
   .logo {
     text-align: center;
   }
@@ -971,7 +971,7 @@ footer ul {
 }
 
 /*****************MOBILE************************/
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 572px) {
   html, body {
     margin: 0px;
     font-family: Roboto, sans-serif;
